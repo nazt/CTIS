@@ -7,6 +7,9 @@ class BootStrap {
 		new Congestion(level:1,info:"Low").save()
 		new Congestion(level:2,info:"Moderate").save()
 		new Congestion(level:3,info:"High").save()
+		new Role(description:"Admin Access",authority:"ROLE_ADMIN").save()
+		new Role(description:"User Access",authority:"ROLE_USER").save()
+		new Requestmap(url:"/secure/**",configAttribute:"ROLE_ADMIN").save()
      }
      def destroy = {
      }
