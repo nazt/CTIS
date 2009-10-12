@@ -1,0 +1,4 @@
+class JqueryTestController {
+
+    def index = {  }
+}
