@@ -29,17 +29,6 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="accuracy">
-                                      <g:message code="report.accuracy.label" default="Accuracy" />
-                                    </label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'accuracy','errors')}">
-                                    <input type="text" id="accuracy" name="accuracy" value="${fieldValue(bean:reportInstance,field:'accuracy')}" />
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
                                     <label for="congestion_cause">
                                       <g:message code="report.congestion_cause.label" default="Congestioncause" />
                                     </label>
@@ -56,29 +45,18 @@
                                     </label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'congestion_level','errors')}">
-                                    <g:select optionKey="id" from="${Congestion.list()}" name="congestion_level.id" value="${reportInstance?.congestion_level?.id}" ></g:select>
+                                    <g:select optionKey="id" from="${CongestionLevel.list()}" name="congestion_level.id" value="${reportInstance?.congestion_level?.id}" ></g:select>
                                 </td>
                             </tr> 
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="dateCreated">
-                                      <g:message code="report.dateCreated.label" default="Date Created" />
+                                    <label for="message">
+                                      <g:message code="report.message.label" default="Message" />
                                     </label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'dateCreated','errors')}">
-                                    <g:datePicker name="dateCreated" value="${reportInstance?.dateCreated}" precision="minute" ></g:datePicker>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="lastUpdated">
-                                      <g:message code="report.lastUpdated.label" default="Last Updated" />
-                                    </label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'lastUpdated','errors')}">
-                                    <g:datePicker name="lastUpdated" value="${reportInstance?.lastUpdated}" precision="minute" ></g:datePicker>
+                                <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'message','errors')}">
+                                    <input type="text" id="message" name="message" value="${fieldValue(bean:reportInstance,field:'message')}"/>
                                 </td>
                             </tr> 
                         
@@ -106,12 +84,34 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="message">
-                                      <g:message code="report.message.label" default="Message" />
+                                    <label for="accuracy">
+                                      <g:message code="report.accuracy.label" default="Accuracy" />
                                     </label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'message','errors')}">
-                                    <input type="text" id="message" name="message" value="${fieldValue(bean:reportInstance,field:'message')}"/>
+                                <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'accuracy','errors')}">
+                                    <input type="text" id="accuracy" name="accuracy" value="${fieldValue(bean:reportInstance,field:'accuracy')}" />
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="dateCreated">
+                                      <g:message code="report.dateCreated.label" default="Date Created" />
+                                    </label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'dateCreated','errors')}">
+                                    <g:datePicker name="dateCreated" value="${reportInstance?.dateCreated}" precision="minute" ></g:datePicker>
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="lastUpdated">
+                                      <g:message code="report.lastUpdated.label" default="Last Updated" />
+                                    </label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'lastUpdated','errors')}">
+                                    <g:datePicker name="lastUpdated" value="${reportInstance?.lastUpdated}" precision="minute" ></g:datePicker>
                                 </td>
                             </tr> 
                         

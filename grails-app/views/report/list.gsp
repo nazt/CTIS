@@ -24,15 +24,15 @@
                         
                    	        <g:sortableColumn property="id" title="${message(code:'report.id.label', default:'Id')}" />
                         
-                   	        <g:sortableColumn property="accuracy" title="${message(code:'report.accuracy.label', default:'Accuracy')}" />
-                        
                    	        <th><g:message code="report.congestion_cause.label" default="Congestioncause" /></th>
                    	    
                    	        <th><g:message code="report.congestion_level.label" default="Congestionlevel" /></th>
                    	    
-                   	        <g:sortableColumn property="dateCreated" title="${message(code:'report.dateCreated.label', default:'Date Created')}" />
+                   	        <g:sortableColumn property="message" title="${message(code:'report.message.label', default:'Message')}" />
                         
-                   	        <g:sortableColumn property="lastUpdated" title="${message(code:'report.lastUpdated.label', default:'Last Updated')}" />
+                   	        <g:sortableColumn property="latitude" title="${message(code:'report.latitude.label', default:'Latitude')}" />
+                        
+                   	        <g:sortableColumn property="longitude" title="${message(code:'report.longitude.label', default:'Longitude')}" />
                         
                         </tr>
                     </thead>
@@ -42,15 +42,15 @@
                         
                             <td><g:link action="show" id="${reportInstance.id}">${fieldValue(bean:reportInstance, field:'id')}</g:link></td>
                         
-                            <td>${fieldValue(bean:reportInstance, field:'accuracy')}</td>
-                        
                             <td>${fieldValue(bean:reportInstance, field:'congestion_cause')}</td>
                         
                             <td>${fieldValue(bean:reportInstance, field:'congestion_level')}</td>
                         
-                            <td>${fieldValue(bean:reportInstance, field:'dateCreated')}</td>
+                            <td>${fieldValue(bean:reportInstance, field:'message')}</td>
                         
-                            <td>${fieldValue(bean:reportInstance, field:'lastUpdated')}</td>
+                            <td>${fieldValue(bean:reportInstance, field:'latitude')}</td>
+                        
+                            <td>${fieldValue(bean:reportInstance, field:'longitude')}</td>
                         
                         </tr>
                     </g:each>

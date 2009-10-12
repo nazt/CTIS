@@ -19,7 +19,7 @@ environments {
  development {
   dataSource {
                         // one of 'create', 'create-drop','update'
-   dbCreate = "create-drop" 
+   dbCreate = "update" 
                         url="jdbc:postgresql://localhost:5432/dev"
                         username = "dev"
                         password = "dev"

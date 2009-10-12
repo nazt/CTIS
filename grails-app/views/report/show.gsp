@@ -34,15 +34,6 @@
                     
                         <tr class="prop">
                             <td valign="top" class="name">
-                               <g:message code="report.accuracy.label" default="Accuracy" />:
-                            </td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean:reportInstance, field:'accuracy')}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name">
                                <g:message code="report.congestion_cause.label" default="Congestioncause" />:
                             </td>
                             
@@ -55,25 +46,16 @@
                                <g:message code="report.congestion_level.label" default="Congestionlevel" />:
                             </td>
                             
-                            <td valign="top" class="value"><g:link controller="congestion" action="show" id="${reportInstance?.congestion_level?.id}">${reportInstance?.congestion_level?.encodeAsHTML()}</g:link></td>
+                            <td valign="top" class="value"><g:link controller="congestionLevel" action="show" id="${reportInstance?.congestion_level?.id}">${reportInstance?.congestion_level?.encodeAsHTML()}</g:link></td>
                             
                         </tr>
                     
                         <tr class="prop">
                             <td valign="top" class="name">
-                               <g:message code="report.dateCreated.label" default="Date Created" />:
+                               <g:message code="report.message.label" default="Message" />:
                             </td>
                             
-                            <td valign="top" class="value">${fieldValue(bean:reportInstance, field:'dateCreated')}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name">
-                               <g:message code="report.lastUpdated.label" default="Last Updated" />:
-                            </td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean:reportInstance, field:'lastUpdated')}</td>
+                            <td valign="top" class="value">${fieldValue(bean:reportInstance, field:'message')}</td>
                             
                         </tr>
                     
@@ -97,10 +79,28 @@
                     
                         <tr class="prop">
                             <td valign="top" class="name">
-                               <g:message code="report.message.label" default="Message" />:
+                               <g:message code="report.accuracy.label" default="Accuracy" />:
                             </td>
                             
-                            <td valign="top" class="value">${fieldValue(bean:reportInstance, field:'message')}</td>
+                            <td valign="top" class="value">${fieldValue(bean:reportInstance, field:'accuracy')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">
+                               <g:message code="report.dateCreated.label" default="Date Created" />:
+                            </td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:reportInstance, field:'dateCreated')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">
+                               <g:message code="report.lastUpdated.label" default="Last Updated" />:
+                            </td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:reportInstance, field:'lastUpdated')}</td>
                             
                         </tr>
                     
