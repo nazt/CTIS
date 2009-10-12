@@ -1,4 +1,5 @@
 class IwebkitController {
 
-    def index = { }
+    def index = {  }
+	def say = { }
 }

@@ -1,0 +1,4 @@
+class SayController {
+
+    def index = {   }
+}
