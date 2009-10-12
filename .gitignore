@@ -1,2 +1,4 @@
+stacktrace*.log
 .DS_STORE
 *.war
+web-app/**
