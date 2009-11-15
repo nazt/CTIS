@@ -6,13 +6,14 @@
 		<div id="title">
 			Say</div>
 		<div id="leftnav">
-			<a href="/CTIS/iwebkit/index"><img src="/CTIS/Framework/images/home.png" alt="home"/></a></div>
+			<a href="/CTIS/iwebkit/index"><img src="/CTIS/Framework/images/home.png" alt="home"/></a>
+		</div>
 	</div>
 	<div id="content">
 
 		<span class="graytitle">Location</span><ul class="pageitem">
  
-			<li class="menu"><a href="list.html">
+			<li class="menu"><a href="/CTIS/iwebkit/map">
 			<img alt="list" src="/CTIS/Framework/thumbs/contacts.png" /><span class="name">Thammasat University, Rungsit Thailand</span><span class="comment">Adjust..</span><span class="arrow"></span></a></li>
 			
 			</ul>	
@@ -30,9 +31,9 @@
 		<span class="graytitle">Cause</span><ul class="pageitem">
 				<li class="form"><select name="how">
 				<option value="0">Choose...</option>				
-				<option value="1">Low</option>
-				<option value="2">Moderate</option>
-				<option value="3">High</option>
+				<option value="1">Accient</option>
+				<option value="2">Raining</option>
+				<option value="3">Under Construction</option>
 				</select><span class="arrow"></span> 
 				</li>
 
@@ -44,9 +45,11 @@
 				<ul class="pageitem">
 					<li class="form"><button name="button">Add Photo</button></li>
 					<li class="form"><button name="button">Send</button></li>
+
+					</ul>
 				</ul>
 	</div>
 	<div id="footer">
-		<a href="http://iwebkit.net">Powered by iWebKit</a></div>
+		<a href="http://iwebkit.net"></a></div>
 	</body>
 	</html>
