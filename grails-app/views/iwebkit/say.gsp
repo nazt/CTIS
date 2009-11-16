@@ -17,6 +17,7 @@
 			<img alt="list" src="/CTIS/Framework/thumbs/contacts.png" /><span class="name">Thammasat University, Rungsit Thailand</span><span class="comment">Adjust..</span><span class="arrow"></span></a></li>
 			
 			</ul>	
+			<g:form name="myForm" url="[action:'form',controller:'iwebkit']"  enctype="multipart/form-data">
 		<span class="graytitle">Congestion Level</span><ul class="pageitem">
 				<li class="form"><select name="how">
 				<option value="0">Choose...</option>				
@@ -29,7 +30,7 @@
 		</ul>
 		
 		<span class="graytitle">Cause</span><ul class="pageitem">
-				<li class="form"><select name="how">
+				<li class="form"><select name="cause">
 				<option value="0">Choose...</option>				
 				<option value="1">Accient</option>
 				<option value="2">Raining</option>
@@ -40,15 +41,16 @@
 		</ul>
 	
 			<span class="graytitle">Say.. (optional)</span><ul class="pageitem">
-					<li class="textbox"><textarea name="TextArea"></textarea></li>
+					<li class="textbox"><textarea name="message"></textarea></li>
 				</ul>
 				<ul class="pageitem">
-					<li class="form"><button name="button">Add Photo</button></li>
+					<li class="form"><input type="file" name="myFile"/></li>
 					<li class="form"><button name="button">Send</button></li>
 
 					</ul>
 				</ul>
 	</div>
+	</g:form>
 	<div id="footer">
 		<a href="http://iwebkit.net"></a></div>
 	</body>

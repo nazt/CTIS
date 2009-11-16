@@ -4,4 +4,5 @@ class IwebkitController {
 	def say = { }
 	def map = { }
 	def view= {}
+	def form = { render params }
 }
