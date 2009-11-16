@@ -97,7 +97,8 @@ class ReportController {
         if(reportInstance.save(flush:true)) {
             flash.message = "Report ${reportInstance.id} created"
 
-            redirect action:"show", id:reportInstance.id
+			/*            redirect action:"show", id:reportInstance.id*/
+			redirect(controller:"iwebkit",action:"index")
         }
         else {
             render view:'create', model:[reportInstance:reportInstance]
