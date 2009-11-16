@@ -33,7 +33,7 @@
 	      <g:each in="${reportInstanceList}" status="i" var="report">
 	         var point${report.id} = new GLatLng(${report.latitude}, ${report.longitude})
 	      var marker${report.id} = new GMarker(point${report.id})
-	      marker${report.id}.bindInfoWindowHtml("${report.message}<br/>${report.message}")
+	      marker${report.id}.bindInfoWindowHtml("${report.congestion_cause}<br/>${report.message}")
 	         map.addOverlay(marker${report.id})
 	      </g:each>
 	  }
