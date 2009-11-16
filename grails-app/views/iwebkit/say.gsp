@@ -17,15 +17,15 @@
 			<img alt="list" src="/CTIS/Framework/thumbs/contacts.png" /><span class="name">Thammasat University, Rungsit Thailand</span><span class="comment">Adjust..</span><span class="arrow"></span></a></li>
 			
 			</ul>	
-			<g:form name="myForm" url="[action:'form',controller:'iwebkit']" >
-		<span class="graytitle">Congestion Level</span><ul class="pageitem">
+			<g:form method="post" url="[action:'save',controller:'report']" >
+
+		<span class="graytitle">Congestion</span><ul class="pageitem">
 				<li class="form">                                   
-					 <g:select optionKey="id" from="${CongestionLevel.list()}" name="congestion_level.id" value="${reportInstance?.congestion_level?.id}"> </g:select>
+						<g:select optionKey="id" from="${CongestionLevel.list()}" name="congestion_level.id" value="${reportInstance?.congestion_level?.id}" ></g:select>
 					<span class="arrow"></span> 
 				</li>
 
 		</ul>
-		
 		<span class="graytitle">Cause</span><ul class="pageitem">
 				<li class="form">                                   
 					 <g:select optionKey="id" from="${CongestionCause.list()}" name="congestion_cause.id" value="${reportInstance?.congestion_cause?.id}" ></g:select>
@@ -41,6 +41,18 @@
 
 					</ul>
 				</ul>
+				<span class="graytitle">Geo Location</span><ul class="pageitem">
+						<li class="form">                                   
+						  <input type="text" id="latitude" name="latitude" value="14.068048" />	
+						</li>
+						<li class="form">
+						  <input type="text" id="longitude" name="longitude" value="100.598779" />
+						</li>
+						<li class="form">
+							 <input type="text" id="accuracy" name="accuracy" value="10" />
+						</li>
+
+				</ul>				
 	</div>
 	</g:form>
 	<div id="footer">

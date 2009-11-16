@@ -16,7 +16,7 @@
 		<li class="menu"><a href="">
 		<img alt="list" src="/CTIS/Framework/thumbs/contacts.png" /><span class="name">List View</span><span class="comment">With 
 		Images</span><span class="arrow"></span></a></li>
-		<li class="menu"><a href="/CTIS/iwebkit/map">
+		<li class="menu"><a href="/CTIS/iwebkit/mapview">
 		<img alt="music" src="/CTIS/Framework/thumbs/ipod.png" /><span class="name">Map View</span><span class="arrow"></span></a></li>
  
 	</ul>
