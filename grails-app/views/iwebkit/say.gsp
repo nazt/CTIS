@@ -17,7 +17,7 @@
 			<img alt="list" src="/CTIS/Framework/thumbs/contacts.png" /><span class="name">Thammasat University, Rungsit Thailand</span><span class="comment">Adjust..</span><span class="arrow"></span></a></li>
 			
 			</ul>	
-			<g:form name="myForm" url="[action:'form',controller:'iwebkit']"  enctype="multipart/form-data">
+			<g:form name="myForm" url="[action:'form',controller:'iwebkit']" >
 		<span class="graytitle">Congestion Level</span><ul class="pageitem">
 				<li class="form"><select name="how">
 				<option value="0">Choose...</option>				
@@ -44,7 +44,6 @@
 					<li class="textbox"><textarea name="message"></textarea></li>
 				</ul>
 				<ul class="pageitem">
-					<li class="form"><input type="file" name="myFile"/></li>
 					<li class="form"><button name="button">Send</button></li>
 
 					</ul>
