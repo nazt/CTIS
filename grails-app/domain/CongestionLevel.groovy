@@ -4,7 +4,7 @@ class CongestionLevel {
 	String info
 	String toString()
 	{
-		return "$level - $info"
+		return "$info"
 	}
     static constraints = {  
 	level() 
