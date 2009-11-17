@@ -18,12 +18,14 @@
 	    var geocoder;
 	    var infowindow = new google.maps.InfoWindow();
 	    var marker;
+		var blueIcon = new google.maps.GIcon(G_DEFAULT_ICON);
 
+		
 	    function initialize() {
 	        geocoder = new google.maps.Geocoder();
 	        var latlng = new google.maps.LatLng(48.76918, 2.27742);
 	        var myOptions = {
-	            zoom: 14,
+	            zoom: 15,
 	            center: latlng,
 	            mapTypeId: google.maps.MapTypeId.ROADMAP
 	        };
@@ -32,6 +34,7 @@
 	    }
 
 	    function displayLocation(position) {
+		
 	        latitude = position.coords.latitude;
 	        longitude = position.coords.longitude;
 	        accuracy = position.coords.accuracy;
@@ -47,7 +50,7 @@
 	                position: latlng, 
 	                map: map,
 					draggable: true
-	            }); 
+	            },this.markerOptions); 
 	            document.getElementById("addressId").childNodes[0].nodeValue=results[0].formatted_address;
 	          } else {
 	            alert("No results found");

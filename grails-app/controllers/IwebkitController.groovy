@@ -7,6 +7,7 @@ class IwebkitController {
 render   Report.list( params )
         [ reportInstanceList: Report.list( params ), reportInstanceTotal: Report.count() ]
     }
+	def map={}
 	def view= {}
 	def form = { render params }
 	def create = {
