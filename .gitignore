@@ -1,3 +1,4 @@
 stacktrace*.log
 .DS_STORE
+.DS*
 *.war
