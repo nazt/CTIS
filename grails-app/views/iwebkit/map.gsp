@@ -13,6 +13,7 @@
 	<meta content="Try out all exclusive features iWebKit 4.0 has to offer and discover how far web developement can go. Create the ultimate WebApp!" name="description" />
 	
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		   <script src="js/gmaps.CircleOverlay.js" type="text/javascript"></script>
 	<script type="text/javascript">
 	    var map;
 	    var geocoder;
@@ -32,6 +33,33 @@
 	
 	        map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 	    }
+		function getCirclePoints(center,radius){
+			var circlePoints = Array();
+			var searchPoints = Array();
+
+			with (Math) {
+				var rLat = (radius/3963.189) * (180/PI); // miles
+				var rLng = rLat/cos(center.lat() * (PI/180));
+
+				for (var a = 0 ; a < 361 ; a++ ) {
+					var aRad = a*(PI/180);
+					var x = center.lng() + (rLng * cos(aRad));
+					var y = center.lat() + (rLat * sin(aRad));
+					var point = new GLatLng(parseFloat(y),parseFloat(x),true);
+					circlePoints.push(point);
+					if (a % pointInterval == 0) {
+						searchPoints.push(point);
+					}
+				}
+			}
+
+			searchPolygon = new GPolygon(circlePoints, '#0000ff', 1, 1, '#0000ff', 0.2);	
+			map.addOverlay(searchPolygon);
+			map.setCenter(searchPolygon.getBounds().getCenter(),map.getBoundsZoomLevel(searchPolygon.getBounds()));
+
+			return searchPoints;
+
+		}
 
 	    function displayLocation(position) {
 		
@@ -39,6 +67,7 @@
 	        longitude = position.coords.longitude;
 	        accuracy = position.coords.accuracy;
 	        speed = position.coords.speed;
+			// getCirclePoints(new google.maps.LatLng(latitude, longitude),30){	
 	        document.getElementById("locationInfoId").childNodes[0].nodeValue = "Long: " + longitude.toFixed(5) + " Lat: " + latitude.toFixed(5) + " Acc: " + accuracy.toFixed(0);
 	        var latlng = new google.maps.LatLng(latitude, longitude);
 	        map.set_center(latlng);
@@ -88,8 +117,7 @@
 
 
 	</script>
-	
-	
+
 </head>
 
 <body onload="initialize();getLocation()">
