@@ -1,7 +1,8 @@
 <html>
 <head>
-    <title>GMaps Circle Test</title>
+    <title>Map Adjustment</title>
     <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAnGpifcTyPEhEhb5IwFOjbhTaJM1gin6IW72XsrpkrP10yMBIQBRXy5v5L1tb-wZeQdbbjNG551qKEg" type="text/javascript"></script>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
     <script type="text/javascript">
 
@@ -36,7 +37,7 @@
 		circleLatLngs = new Array();
 		var circleLat = this.radius * 0.014483;  // Convert statute miles into degrees latitude
 		var circleLng = circleLat / Math.cos(this.latLng.lat() * d2r);
-		var numPoints = 40;
+		var numPoints =  6;
 
 		// 2PI = 360 degrees, +1 so that the end points meet
 		for (var i = 0; i < numPoints + 1; i++) { 
@@ -83,11 +84,11 @@
         if (isCompatible) {
             // Create Map
             map = new GMap2(document.getElementById("map"));
-            map.setCenter(new GLatLng(100, -74), 6);
+            map.setCenter(new GLatLng(100.58,14.06), 6);
 
-            // Add controls
-            map.addControl(new GLargeMapControl());
-            map.addControl(new GMapTypeControl());
+            // // Add controls
+            // map.addControl(new GLargeMapControl());
+            // map.addControl(new GMapTypeControl());
 			
 			// Create and add the circle
             // circle = new CircleOverlay(map.getCenter(), circleRadius, "#336699", 1, 1, '#336699', 0.2);
@@ -95,6 +96,19 @@
         }
     }
     //]]>
+	function detectBrowser() {
+	  var useragent = navigator.userAgent;
+	  var mapdiv = document.getElementById("map");
+
+	  if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 ) {
+	    mapdiv.style.width = '100%';
+	    mapdiv.style.height = '100%';
+	  } else {
+	    mapdiv.style.width = '600px';
+	    mapdiv.style.height = '800px';
+	  }
+	}
+
     function getLocation() {
         navigator.geolocation.getCurrentPosition(displayLocation, handleError, {maximumAge:600000, timeout:0, enableHighAccuracy:true});
     }
@@ -103,11 +117,23 @@
 		        longitude = position.coords.longitude;
 		        accuracy = position.coords.accuracy;
 		        speed = position.coords.speed;
-		 		map.setCenter(new GLatLng(latitude, longitude),15);
+				var center =new GLatLng(latitude, longitude);
+		 		map.setCenter(center,16);
 		
-				alert('Found location: ' + latitude + ', ' + longitude + ', '); 
+				//alert('Found location: ' + latitude + ', ' + longitude + ', '); 
 				circle = new CircleOverlay(map.getCenter(), accuracy/1609.344 , "#336699", 1, 1, '#336699', 0.2);
 							map.addOverlay(circle);
+							var marker = new GMarker(center, {draggable: true});
+							        GEvent.addListener(marker, "dragstart", function() {
+							          map.closeInfoWindow();
+							        });
+
+							        GEvent.addListener(marker, "dragend", function() {
+							        marker.openInfoWindowHtml("Just bouncing along..."+map.getCenter()); //
+							        });
+
+							        map.addOverlay(marker);
+							
 			// // getCirclePoints(new google.maps.LatLng(latitude, longitude),30){	
 			//         document.getElementById("locationInfoId").childNodes[0].nodeValue = "Long: " + longitude.toFixed(5) + " Lat: " + latitude.toFixed(5) + " Acc: " + accuracy.toFixed(0);
 			//         var latlng = new google.maps.LatLng(latitude, longitude);
@@ -130,6 +156,7 @@
 			//         }
 			//       });
 			//     }
+			  
     }
 	function foundLocation(position) 
 	{ 
@@ -144,7 +171,7 @@
     }
     </script>
 </head>
-<body onload="load();getLocation();" onunload="GUnload()">
+<body onload="detectBrowser();load();getLocation();" onunload="GUnload()">
 	<div id="map" style="width: 400px; height: 300px; border: 1px solid #666666;"></div>
 </body>
 </html>
