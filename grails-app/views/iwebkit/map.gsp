@@ -85,14 +85,6 @@
             // Create Map
             map = new GMap2(document.getElementById("map"));
             map.setCenter(new GLatLng(100.58,14.06), 6);
-
-            // // Add controls
-            // map.addControl(new GLargeMapControl());
-            // map.addControl(new GMapTypeControl());
-			
-			// Create and add the circle
-            // circle = new CircleOverlay(map.getCenter(), circleRadius, "#336699", 1, 1, '#336699', 0.2);
-			// map.addOverlay(circle);
         }
     }
     //]]>
@@ -133,29 +125,6 @@
 							        });
 
 							        map.addOverlay(marker);
-							
-			// // getCirclePoints(new google.maps.LatLng(latitude, longitude),30){	
-			//         document.getElementById("locationInfoId").childNodes[0].nodeValue = "Long: " + longitude.toFixed(5) + " Lat: " + latitude.toFixed(5) + " Acc: " + accuracy.toFixed(0);
-			//         var latlng = new google.maps.LatLng(latitude, longitude);
-			//         map.set_center(latlng);
-			//         if (geocoder) {
-			//       geocoder.geocode({'latLng': latlng}, function(results, status) {
-			//         if (status == google.maps.GeocoderStatus.OK) {
-			//           if (results[0]) {
-			//             marker = new google.maps.Marker({
-			//                 position: latlng, 
-			//                 map: map,
-			// 		draggable: true
-			//             },this.markerOptions); 
-			//             document.getElementById("addressId").childNodes[0].nodeValue=results[0].formatted_address;
-			//           } else {
-			//             alert("No results found");
-			//           }
-			//         } else {
-			//           ;//alert("Geocoder failed due to: " + status);
-			//         }
-			//       });
-			//     }
 			  
     }
 	function foundLocation(position) 
