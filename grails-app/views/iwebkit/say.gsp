@@ -40,7 +40,11 @@
 		        place = response.Placemark[0];
 		        // point = new GLatLng(place.Point.coordinates[1],
 		        //                     place.Point.coordinates[0]);
-				alert( place.address );
+				// alert( place.address );
+				   document.getElementById('address').innerText = place.address;
+				  document.forms[0].latitude.value = place.Point.coordinates[1];
+				  document.forms[0].longitude.value = place.Point.coordinates[0];
+				  document.forms[0].accuracy.value = place.AddressDetails.Accuracy ;
 		        // marker = new GMarker(point);
 		        // map.addOverlay(marker);
 		        // marker.openInfoWindowHtml(
@@ -77,7 +81,7 @@
 			<span class="graytitle">Location</span><ul class="pageitem">
  
 				<li class="menu"><a href="/CTIS/iwebkit/map">
-				<img alt="list" src="/CTIS/Framework/thumbs/contacts.png" /><span class="name">Thammasat University, Rungsit Thailand</span><span class="comment">Adjust..</span><span class="arrow"></span></a></li>
+				<img alt="list" src="/CTIS/Framework/thumbs/contacts.png" /><span class="name" id="address">Seaching ...</span><span class="comment">Adjust..</span><span class="arrow"></span></a></li>
 			
 				</ul>	
 				<g:form method="post" url="[action:'save',controller:'report']" >
