@@ -125,7 +125,7 @@
 								        });
 
 								        GEvent.addListener(marker, "dragend", function() {
-								        marker.openInfoWindowHtml("Just bouncing along..."+map.getCenter()); //
+								        marker.openInfoWindowHtml("Just bouncing along..."+ this.getLatLng()); //
 								        });
 
 								        map.addOverlay(marker);
