@@ -15,6 +15,12 @@ render   Report.list( params )
         reportInstance.properties = params
         return ['reportInstance':reportInstance]
     }
-	def mapview={params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
-	        [ reportInstanceList: Report.list( params ), reportInstanceTotal: Report.count() ] }
+	def mapview={
+		params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
+	        [ reportInstanceList: Report.list( params ), reportInstanceTotal: Report.count() ] 
+	}
+	def listview={
+        params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
+        [ reportInstanceList: Report.list( params ), reportInstanceTotal: Report.count() ]		
+	}
 }
