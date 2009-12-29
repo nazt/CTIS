@@ -45,7 +45,7 @@
 		</ul> -->
 	</div>
 	<ul id="post-options">
-			<li>
+			<!-- <li>
 				<a id="oprev" href="http://news.iwebkit.net/?p=95" />
 			</li>
 			<li>
@@ -65,7 +65,7 @@
 			</li>
 			<li>
 				<a id="onext" href="http://news.iwebkit.net/?p=97"/>
-			</li>
+			</li> -->
 		</ul>
 	<div id="footer">
 		<a href="http://iwebkit.net"> </a></div>
