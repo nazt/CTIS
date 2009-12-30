@@ -7,7 +7,8 @@ class CongestionLevel {
 		return "$info"
 	}
     static constraints = {  
-	level() 
-	info()    }
+	level(unique:true,blank:false) 
+	info(blank:true)   
+	 }
   
 }

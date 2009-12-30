@@ -8,12 +8,12 @@ class Report {
 	Date dateCreated
 	Date lastUpdated	
     static constraints = {
-		congestion_cause()
-		congestion_level()
+		congestion_cause(blank:false)
+		congestion_level(blnak:false)
 		message()
-		latitude()
-		longitude()
-		accuracy()
+		latitude(blank:false)
+		longitude(blank:false)
+		accuracy(blank:true)
     }
 	
 	String toString()
