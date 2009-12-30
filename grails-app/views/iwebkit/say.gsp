@@ -59,8 +59,8 @@
 		      }
 		}					
 			function handleError(error) {
-				document.getElementById('address').innerText = "unknown location handled";
-			    alert('Error during location: ' + error.code + ' ' + error.message);
+				document.getElementById('address').innerText = "GPS Error! Please Check Location Service.";
+			    alert('Error during location: ' + error.code + ' ' + error.message + ' Please Check Location Service. ');
 			}
 		</script>
 		<title>Share  </title><meta content="Community-gnerated Traffic Information System" name="description" />
