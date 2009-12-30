@@ -18,25 +18,17 @@
 			Community Traffic Information</div>
 	</div>
 	<div id="content">
-		<!-- <ul class="pageitem">
-			<li class="textbox"><span class="header">Welcome</span><p>Welcome to the 
-			iWebKit 4 Demo site!</p>
-			</li>
-			<li class="menu"><a href="changelog.html">
-			<img alt="changelog" src="/CTIS/Framework/thumbs/start.png" /><span class="name">What&#39;s 
-			New?</span><span class="arrow"></span></a></li>
-		</ul> -->
 		<span class="graytitle">Features</span><ul class="pageitem">
 			<li class="menu"><a href="">
-			<img alt="list" src="/CTIS/Framework/thumbs/contacts.png" /><span class="name">Home</span><span class="arrow"></span></a></li>
+			<img alt="list" src="/CTIS/Framework/thumbs/home.png" /><span class="name">Home</span><span class="arrow"></span></a></li>
 			<li class="menu"><a href="/CTIS/iwebkit/say">
-			<img alt="music" src="/CTIS/Framework/thumbs/ipod.png" /><span class="name">Say</span><span class="arrow"></span></a></li>
+			<img alt="music" src="/CTIS/Framework/thumbs/say.png" /><span class="name">Say</span><span class="arrow"></span></a></li>
 			<li class="menu"><a href="/CTIS/iwebkit/view">
-			<img alt="store" src="/CTIS/Framework/thumbs/itunes.png" /><span class="name">View</span><span class="arrow"></span></a></li>
+			<img alt="store" src="/CTIS/Framework/thumbs/view.png" /><span class="name">View</span><span class="arrow"></span></a></li>
 			<li class="menu"><a href="/CTIS/iwebkit/mapview">
-			<img alt="popup" src="/CTIS/Framework/thumbs/plugin.png" /><span class="name">Map</span><span class="comment">Exclusive!</span><span class="arrow"></span></a></li>
+			<img alt="popup" src="/CTIS/Framework/thumbs/map2.png" /><span class="name">Map</span><span class="comment">Map View!</span> </a></li>
 			<li class="menu"><a href="fullscreen.html">
-			<img alt="fullscreen" src="/CTIS/Framework/thumbs/camera.png" /><span class="name">Where Cool</span><span class="comment">Exclusive!</span><span class="arrow"></span></a></li>
+			<img alt="fullscreen" src="/CTIS/Framework/thumbs/about.png" /><span class="name">About</span><span class="comment">Exclusive!</span> </a></li>
 		</ul>
 		<!-- <span class="graytitle">Outgoing Links</span><ul class="pageitem">
 			<li class="menu"><a href="rss.html">
