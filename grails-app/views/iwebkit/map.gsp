@@ -7,7 +7,7 @@
 		<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
 		<link href="/CTIS/Framework/css/style.css" rel="stylesheet" type="text/css" />
 		<script src="/CTIS/Framework/javascript/functions.js" type="text/javascript"></script>
-		 <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAnGpifcTyPEhEhb5IwFOjbhTaJM1gin6IW72XsrpkrP10yMBIQBRXy5v5L1tb-wZeQdbbjNG551qKEg" type="text/javascript"></script>
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAnGpifcTyPEhEhb5IwFOjbhSKxM24ZlyNZgLKBcZWsVdveIArVBQeFEasr_Ised3Jg_JcOMYzbXQiFg" type="text/javascript"></script>
 		<script type="text/javascript">
 
 		// This file adds a new circle overlay to GMaps2
@@ -41,7 +41,7 @@
 			circleLatLngs = new Array();
 			var circleLat = this.radius * 0.014483;  // Convert statute miles into degrees latitude
 			var circleLng = circleLat / Math.cos(this.latLng.lat() * d2r);
-			var numPoints =  6;
+			var numPoints =  50		;
 
 			// 2PI = 360 degrees, +1 so that the end points meet
 			for (var i = 0; i < numPoints + 1; i++) { 
@@ -54,6 +54,7 @@
 
 			this.clear();
 			this.polygon = new GPolygon(circleLatLngs, this.strokeColor, this.strokeWidth, this.strokeOpacity, this.fillColor, this.fillOpacity);
+
 			this.map.addOverlay(this.polygon);
 		}
 
@@ -85,6 +86,7 @@
 
 		//<![CDATA[
 		function load() {
+				iWebkit();
 		    if (isCompatible) {
 		        // Create Map
 		        map = new GMap2(document.getElementById("map"));
@@ -118,6 +120,7 @@
 
 					//alert('Found location: ' + latitude + ', ' + longitude + ', '); 
 					circle = new CircleOverlay(map.getCenter(), accuracy/1609.344 , "#336699", 1, 1, '#336699', 0.2);
+								map.removeOverlay(circle);
 								map.addOverlay(circle);
 								var marker = new GMarker(center, {draggable: true});
 								        GEvent.addListener(marker, "dragstart", function() {
