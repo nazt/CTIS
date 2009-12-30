@@ -1,21 +1,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta content="yes" name="apple-mobile-web-app-capable" />
-	<meta content="index,follow" name="robots" />
-	<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
-	
+	<meta content="index,follow" name="robots" /><meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
 	<link href="http://iwebkit.net/apple-touch-icon.png" rel="apple-touch-icon" />
 	<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
-  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAnGpifcTyPEhEhb5IwFOjbhTaJM1gin6IW72XsrpkrP10yMBIQBRXy5v5L1tb-wZeQdbbjNG551qKEg" type="text/javascript"></script>
+	<link href="/CTIS/Framework/css/style.css" rel="stylesheet" type="text/css" />
+	<script src="/CTIS/Framework/javascript/functions.js" type="text/javascript"></script>
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAnGpifcTyPEhEhb5IwFOjbhSKxM24ZlyNZgLKBcZWsVdveIArVBQeFEasr_Ised3Jg_JcOMYzbXQiFg" type="text/javascript"></script>
  
 
 
 	<script type="text/javascript">
 	var usCenterPoint = new GLatLng(14.068, 100.599)
 	
-	var usZoom = 5	
+	var usZoom = 8;
 
 	function load() {
+		iWebkit();
 	  if (GBrowserIsCompatible()) {
 	    var map = new GMap2(document.getElementById("map"))
 	    map.setCenter(usCenterPoint, usZoom)
@@ -78,7 +79,19 @@
 	
 </head>
 
-<body onload="load()" onunload="GUnload()">
-  <div id="map" style="width: 500px; height: 300px"></div>
+<body onload="load()" onunload="GUnload()" >
+	<div id="topbar">
+		<div id="title">
+			Map View</div>
+		<div id="leftnav">
+			<a href="/CTIS/iwebkit/say"><img src="/CTIS/Framework/images/home.png" alt="say"/></a>
+		</div>
+	</div>
+	<div id="content">
+			<span class="graytitle">Location</span><ul class="pageitem">
+			<div id="map" style="width: 400px; height: 300px; border: 1px solid #666666;"></div>
+	</div>
+			 
+	<div id="footer">	<a href="http://iwebkit.net"></a></div>	
 </body>
 </html>
