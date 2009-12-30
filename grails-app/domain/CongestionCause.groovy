@@ -1,6 +1,7 @@
 class CongestionCause {
 	static hasMany = [congestion_cause:Report]	
-	String reason
+	String reason 
+	String imageSrc="blank.png"
     static constraints = {
 		reason(unique:true)
     }
