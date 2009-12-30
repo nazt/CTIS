@@ -43,7 +43,7 @@
 		        //                     place.Point.coordinates[0]);
 				// alert( place.address );
 				   document.getElementById('address').innerText = place.address;
-				 document.mapicon.src = "/CTIS/Framework/thumbs/mapsearched.png";
+				   document.mapicon.src = "/CTIS/Framework/thumbs/mapsearched.png";
 
 
 		        // marker = new GMarker(point);
@@ -111,7 +111,7 @@
 
 						</ul>
 					
-					<span class="graytitle">Geo Location</span><ul class="pageitem">
+					<span class="graytitle">Geo Location (please don't change)</span><ul class="pageitem">
 							<li class="form">                                   
 							  <input type="text" id="latitude" name="latitude" value="14.11101" />	
 							</li>
