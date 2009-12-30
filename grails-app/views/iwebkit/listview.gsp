@@ -7,7 +7,7 @@
 		<div id="title">
 			View Option</div>
 		<div id="leftnav">
-			<a href="/CTIS/iwebkit/index"><img src="/CTIS/Framework/images/home.png" alt="home"/></a>
+			<a href="/CTIS/iwebkit/view"><img src="/CTIS/Framework/images/home.png" alt="home"/></a>
 		</div>
 	</div>
 <div id="content">
@@ -16,7 +16,7 @@
 	 <g:each in="${reportInstanceList}" status="i" var="reportInstance">
 		
 	<li>
-		<a href="index.html">
+		<a href="">
 			<span class="name">${fieldValue(bean:reportInstance, field:'message')}</span>
 			<span class="arrow"></span>
 		</a>

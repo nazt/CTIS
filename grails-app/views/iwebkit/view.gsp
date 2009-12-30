@@ -13,7 +13,7 @@
 <div id="content">
  
 	<span class="graytitle">View Option</span><ul class="pageitem">
-		<li class="menu"><a href="">
+		<li class="menu"><a href="listview">
 		<img alt="list" src="/CTIS/Framework/thumbs/contacts.png" /><span class="name">List View</span><span class="comment">With 
 		Images</span><span class="arrow"></span></a></li>
 		<li class="menu"><a href="/CTIS/iwebkit/mapview">

@@ -33,7 +33,7 @@
 			<img alt="music" src="/CTIS/Framework/thumbs/ipod.png" /><span class="name">Say</span><span class="arrow"></span></a></li>
 			<li class="menu"><a href="/CTIS/iwebkit/view">
 			<img alt="store" src="/CTIS/Framework/thumbs/itunes.png" /><span class="name">View</span><span class="arrow"></span></a></li>
-			<li class="menu"><a href="/CTIS/iwebkit/map">
+			<li class="menu"><a href="/CTIS/iwebkit/mapview">
 			<img alt="popup" src="/CTIS/Framework/thumbs/plugin.png" /><span class="name">Map</span><span class="comment">Exclusive!</span><span class="arrow"></span></a></li>
 			<li class="menu"><a href="fullscreen.html">
 			<img alt="fullscreen" src="/CTIS/Framework/thumbs/camera.png" /><span class="name">Where Cool</span><span class="comment">Exclusive!</span><span class="arrow"></span></a></li>

@@ -153,7 +153,7 @@
 			<div id="title">
 				Adjust</div>
 			<div id="leftnav">
-				<a href="/CTIS/iwebkit/index"><img src="/CTIS/Framework/images/home.png" alt="say"/></a>
+				<a href="/CTIS/iwebkit/say"><img src="/CTIS/Framework/images/home.png" alt="say"/></a>
 			</div>
 		</div>
 		<div id="content">
