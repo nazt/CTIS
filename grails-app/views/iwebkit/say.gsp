@@ -113,10 +113,10 @@
 					
 					<span class="graytitle">Geo Location</span><ul class="pageitem">
 							<li class="form">                                   
-							  <input type="text" id="latitude" name="latitude" value="14.068048" />	
+							  <input type="text" id="latitude" name="latitude" value="14.11101" />	
 							</li>
 							<li class="form">
-							  <input type="text" id="longitude" name="longitude" value="100.598779" />
+							  <input type="text" id="longitude" name="longitude" value="100.00125" />
 							</li>
 							<li class="form">
 								 <input type="text" id="accuracy" name="accuracy" value="10" />
