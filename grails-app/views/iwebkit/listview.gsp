@@ -30,14 +30,13 @@
 					<img src="/CTIS/Framework/thumbs/${reportInstance?.congestion_cause?.imageSrc}" alt="test"/>
 					<span class="name">${fieldValue(bean:reportInstance,field:'message')}</span>
 					<span class="comment">Thailand</span>
-					<span class="arrow"/>
+					<span class="arrow"></span>
 				</a>
+			</li>
 		  </g:each>
-   
+		<li class=" autolisttext  "><a href="#" class="noeffect">Load 10 more items...</a></li>
 	</ul>
 </div>
  
-<div id="footer">
-	<a href="http://iwebkit.net"> </a></div>
 </body>
 </html>
