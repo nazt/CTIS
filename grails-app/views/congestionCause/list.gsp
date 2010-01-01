@@ -28,6 +28,8 @@
                         
                             <g:sortableColumn property="imageSrc" title="${message(code: 'congestionCause.imageSrc.label', default: 'Image Src')}" />
                         
+                            <g:sortableColumn property="iconName" title="${message(code: 'congestionCause.iconName.label', default: 'Icon Name')}" />
+                        
                         </tr>
                     </thead>
                     <tbody>
@@ -39,6 +41,8 @@
                             <td>${fieldValue(bean: congestionCauseInstance, field: "reason")}</td>
                         
                             <td>${fieldValue(bean: congestionCauseInstance, field: "imageSrc")}</td>
+                        
+                            <td>${fieldValue(bean: congestionCauseInstance, field: "iconName")}</td>
                         
                         </tr>
                     </g:each>

@@ -56,6 +56,13 @@
                             
                         </tr>
                     
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="congestionCause.iconName.label" default="Icon Name" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: congestionCauseInstance, field: "iconName")}</td>
+                            
+                        </tr>
+                    
                     </tbody>
                 </table>
             </div>

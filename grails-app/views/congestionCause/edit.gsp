@@ -64,6 +64,15 @@
                                 </td>
                             </tr>
                         
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="iconName"><g:message code="congestionCause.iconName.label" default="Icon Name" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: congestionCauseInstance, field: 'iconName', 'errors')}">
+                                    <g:textField name="iconName" value="${congestionCauseInstance?.iconName}" />
+                                </td>
+                            </tr>
+                        
                         </tbody>
                     </table>
                 </div>

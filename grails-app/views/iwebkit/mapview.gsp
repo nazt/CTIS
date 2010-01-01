@@ -60,9 +60,9 @@
 
 
 
-		var markerOptions = {icon:santaIcon, draggable: true};
-		var accidentOptions = {icon:accidentIcon, draggable: true};
-		var rainingOptions = {icon:raingingIcon, draggable: true};
+		var markerOptions = {icon:santaIcon, draggable: false};
+		var accidentOptions = {icon:accidentIcon, draggable: false};
+		var rainingOptions = {icon:rainingIcon, draggable: false};
 		// var marker = new GMarker(santaPoint,markerOptions );
 		
 		
@@ -131,7 +131,7 @@
 		<div id="title">
 			Map View</div>
 		<div id="leftnav">
-			<a href="/CTIS/iwebkit/say"><img src="/CTIS/Framework/images/home.png" alt="say"/></a>
+			<a href="/CTIS/iwebkit/view"><img src="/CTIS/Framework/images/home.png" alt="say"/></a>
 		</div>
 	</div>
 	<div id="content">
