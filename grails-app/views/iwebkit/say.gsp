@@ -87,7 +87,7 @@
 				
 				<span class="graytitle">ระดับความติดขัด</span><ul class="pageitem">
 						<li class="form">                                   
-								<g:select optionKey="id" from="${CongestionLevel.list()}" name="congestion_level.id" value="${reportInstance?.congestion_level?.id}" ></g:select>
+								<g:select optionKey="id" from="${CongestionLevel.list().sort{it.level}}" name="congestion_level.id" value="${reportInstance?.congestion_level?.id}" ></g:select>
 							<span class="arrow"></span> 
 						</li>
 
