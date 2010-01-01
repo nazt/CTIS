@@ -10,7 +10,7 @@ class ReportController {
     static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
     def list = {
-        params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
+        params.max = Math.min( params.max ? params.max.toInteger() : 50,  100)
         [ reportInstanceList: Report.list( params ), reportInstanceTotal: Report.count() ]
     }
 
