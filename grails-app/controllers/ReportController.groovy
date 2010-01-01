@@ -1,3 +1,4 @@
+
 class ReportController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -22,6 +23,16 @@ class ReportController {
         if (reportInstance.save(flush: true)) {
             flash.message = "${message(code: 'default.created.message', args: [message(code: 'report.label', default: 'Report'), reportInstance.id])}"
             redirect(action: "show", id: reportInstance.id)
+        }
+        else {
+            render(view: "create", model: [reportInstance: reportInstance])
+        }
+    }
+    def isave = {
+        def reportInstance = new Report(params)
+        if (reportInstance.save(flush: true)) {
+            flash.message = "${message(code: 'default.created.message', args: [message(code: 'report.label', default: 'Report'), reportInstance.id])}"
+            redirect(action: "index", controller:"iwebkit",id: reportInstance.id)
         }
         else {
             render(view: "create", model: [reportInstance: reportInstance])

@@ -83,7 +83,7 @@
 				<span class="name" id="address">Resolving ... </span><span class="comment">Adjust..</span><span class="arrow"></span></a></li>
 			
 				</ul>	
-				<g:form method="post" url="[action:'save',controller:'report']" >
+				<g:form method="post" url="[action:'isave',controller:'report']" >
 				
 				<span class="graytitle">ระดับความติดขัด</span><ul class="pageitem">
 						<li class="form">                                   
