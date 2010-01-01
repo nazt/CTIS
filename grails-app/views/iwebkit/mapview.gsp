@@ -63,6 +63,7 @@
 		var markerOptions = {icon:santaIcon, draggable: false};
 		var accidentOptions = {icon:accidentIcon, draggable: false};
 		var rainingOptions = {icon:rainingIcon, draggable: false};
+		var santaOptions = {icon:rainingIcon, draggable: false};
 		// var marker = new GMarker(santaPoint,markerOptions );
 		
 		
@@ -76,7 +77,7 @@
 
 	      <g:each in="${reportInstanceList}" status="i" var="report">
 	         var point${report.id} = new GLatLng(${report.latitude}, ${report.longitude})
-	      var marker${report.id} = new GMarker(point${report.id},rainingOptions)
+	      var marker${report.id} = new GMarker(point${report.id},${report.congestion_cause?.iconName}Options)
 	      marker${report.id}.bindInfoWindowHtml("${report.congestion_cause}<br/>${report.message}")
 	         map.addOverlay(marker${report.id})
 	      </g:each>
