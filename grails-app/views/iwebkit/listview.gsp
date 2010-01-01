@@ -25,16 +25,17 @@
  <ul class="autolist">
 	<li class="title">Traffic  Report</li>
 	 <g:each in="${reportInstanceList}" status="i" var="reportInstance">
-			<li class="withimage">
+			<li class="withimage " >
 					<a class="noeffect" href="">
-					<img src="/CTIS/Framework/thumbs/${reportInstance?.congestion_cause?.imageSrc}" alt="test"/>
+					<img src="/CTIS/Framework/images/${reportInstance?.congestion_cause?.iconName}${reportInstance?.congestion_level?.colour}" alt="${reportInstance?.congestion_cause?.iconName}"/>
 					<span class="name">${fieldValue(bean:reportInstance,field:'message')}</span>
-					<span class="comment">Thailand</span>
+					<span class="comment">Thailand<br>
+					${reportInstance.dateCreated}</span>
 					<span class="arrow"></span>
 				</a>
 			</li>
 		  </g:each>
-		<li class=" autolisttext  "><a href="#" class="noeffect">Load 10 more items...</a></li>
+		<li class=" autolisttext  "><a href="#" class="noeffect">Show 10 more items...</a></li>
 	</ul>
 </div>
  
