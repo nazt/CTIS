@@ -21,6 +21,8 @@ render   Report.list( params )
 	}
 	def listview={
         params.max = Math.min( params.max ? params.max.toInteger() : 100,  100)
-        [ reportInstanceList: Report.list( params ), reportInstanceTotal: Report.count() ]		
+		params.sort="createdDate"
+		params.order="desc"
+        [ reportInstanceList: Report.list(sort:"dateCreated", order:"desc"), reportInstanceTotal: Report.count() ]		
 	}
 }
