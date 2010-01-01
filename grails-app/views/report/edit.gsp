@@ -2,19 +2,19 @@
 
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="layout" content="main" />
-        <g:set var="entityName" value="${message(code:'report.label', default:'Report')}" />
-        <title>Edit ${entityName}</title>
+        <g:set var="entityName" value="${message(code: 'report.label', default: 'Report')}" />
+        <title><g:message code="default.edit.label" args="[entityName]" /></title>
     </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="list" action="list">${entityName} List</g:link></span>
-            <span class="menuButton"><g:link class="create" action="create">New ${entityName}</g:link></span>
+            <span class="menuButton"><a class="home" href="${resource(dir: '')}">Home</a></span>
+            <span class="menuButton"><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></span>
+            <span class="menuButton"><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></span>
         </div>
         <div class="body">
-            <h1>Edit ${entityName}</h1>
+            <h1><g:message code="default.edit.label" args="[entityName]" /></h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -24,114 +24,126 @@
             </div>
             </g:hasErrors>
             <g:form method="post" >
-                <input type="hidden" name="id" value="${reportInstance?.id}" />
-                <input type="hidden" name="version" value="${reportInstance?.version}" />
+                <g:hiddenField name="id" value="${reportInstance?.id}" />
+                <g:hiddenField name="version" value="${reportInstance?.version}" />
                 <div class="dialog">
                     <table>
                         <tbody>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="congestion_cause">
-                                    <g:message code="report.congestion_cause.label" default="Congestioncause" />
-                                  </label>
-
+                                  <label for="congestion_cause"><g:message code="report.congestion_cause.label" default="Congestioncause" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'congestion_cause','errors')}">
-                                    <g:select optionKey="id" from="${CongestionCause.list()}" name="congestion_cause.id" value="${reportInstance?.congestion_cause?.id}" ></g:select>
+                                <td valign="top" class="value ${hasErrors(bean: reportInstance, field: 'congestion_cause', 'errors')}">
+                                    <g:select name="congestion_cause.id" from="${CongestionCause.list()}" optionKey="id" value="${reportInstance?.congestion_cause?.id}"  />
                                 </td>
-                            </tr> 
+                            </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="congestion_level">
-                                    <g:message code="report.congestion_level.label" default="Congestionlevel" />
-                                  </label>
-
+                                  <label for="congestion_level"><g:message code="report.congestion_level.label" default="Congestionlevel" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'congestion_level','errors')}">
-                                    <g:select optionKey="id" from="${CongestionLevel.list()}" name="congestion_level.id" value="${reportInstance?.congestion_level?.id}" ></g:select>
+                                <td valign="top" class="value ${hasErrors(bean: reportInstance, field: 'congestion_level', 'errors')}">
+                                    <g:select name="congestion_level.id" from="${CongestionLevel.list()}" optionKey="id" value="${reportInstance?.congestion_level?.id}"  />
                                 </td>
-                            </tr> 
+                            </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="message">
-                                    <g:message code="report.message.label" default="Message" />
-                                  </label>
-
+                                  <label for="message"><g:message code="report.message.label" default="Message" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'message','errors')}">
-                                    <input type="text" id="message" name="message" value="${fieldValue(bean:reportInstance,field:'message')}"/>
+                                <td valign="top" class="value ${hasErrors(bean: reportInstance, field: 'message', 'errors')}">
+                                    <g:textField name="message" value="${reportInstance?.message}" />
                                 </td>
-                            </tr> 
+                            </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="latitude">
-                                    <g:message code="report.latitude.label" default="Latitude" />
-                                  </label>
-
+                                  <label for="latitude"><g:message code="report.latitude.label" default="Latitude" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'latitude','errors')}">
-                                    <input type="text" id="latitude" name="latitude" value="${fieldValue(bean:reportInstance,field:'latitude')}" />
+                                <td valign="top" class="value ${hasErrors(bean: reportInstance, field: 'latitude', 'errors')}">
+                                    <g:textField name="latitude" value="${fieldValue(bean: reportInstance, field: 'latitude')}" />
                                 </td>
-                            </tr> 
+                            </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="longitude">
-                                    <g:message code="report.longitude.label" default="Longitude" />
-                                  </label>
-
+                                  <label for="longitude"><g:message code="report.longitude.label" default="Longitude" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'longitude','errors')}">
-                                    <input type="text" id="longitude" name="longitude" value="${fieldValue(bean:reportInstance,field:'longitude')}" />
+                                <td valign="top" class="value ${hasErrors(bean: reportInstance, field: 'longitude', 'errors')}">
+                                    <g:textField name="longitude" value="${fieldValue(bean: reportInstance, field: 'longitude')}" />
                                 </td>
-                            </tr> 
+                            </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="accuracy">
-                                    <g:message code="report.accuracy.label" default="Accuracy" />
-                                  </label>
-
+                                  <label for="accuracy"><g:message code="report.accuracy.label" default="Accuracy" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'accuracy','errors')}">
-                                    <input type="text" id="accuracy" name="accuracy" value="${fieldValue(bean:reportInstance,field:'accuracy')}" />
+                                <td valign="top" class="value ${hasErrors(bean: reportInstance, field: 'accuracy', 'errors')}">
+                                    <g:textField name="accuracy" value="${fieldValue(bean: reportInstance, field: 'accuracy')}" />
                                 </td>
-                            </tr> 
+                            </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="dateCreated">
-                                    <g:message code="report.dateCreated.label" default="Date Created" />
-                                  </label>
-
+                                  <label for="heading"><g:message code="report.heading.label" default="Heading" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'dateCreated','errors')}">
-                                    <g:datePicker name="dateCreated" value="${reportInstance?.dateCreated}" precision="minute" ></g:datePicker>
+                                <td valign="top" class="value ${hasErrors(bean: reportInstance, field: 'heading', 'errors')}">
+                                    <g:textField name="heading" value="${reportInstance?.heading}" />
                                 </td>
-                            </tr> 
+                            </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="lastUpdated">
-                                    <g:message code="report.lastUpdated.label" default="Last Updated" />
-                                  </label>
-
+                                  <label for="speed"><g:message code="report.speed.label" default="Speed" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:reportInstance,field:'lastUpdated','errors')}">
-                                    <g:datePicker name="lastUpdated" value="${reportInstance?.lastUpdated}" precision="minute" ></g:datePicker>
+                                <td valign="top" class="value ${hasErrors(bean: reportInstance, field: 'speed', 'errors')}">
+                                    <g:textField name="speed" value="${fieldValue(bean: reportInstance, field: 'speed')}" />
                                 </td>
-                            </tr> 
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="locationTimestamp"><g:message code="report.locationTimestamp.label" default="Location Timestamp" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: reportInstance, field: 'locationTimestamp', 'errors')}">
+                                    <g:datePicker name="locationTimestamp" precision="day" value="${reportInstance?.locationTimestamp}" noSelection="['': '']" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="locationName"><g:message code="report.locationName.label" default="Location Name" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: reportInstance, field: 'locationName', 'errors')}">
+                                    <g:textField name="locationName" value="${reportInstance?.locationName}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="dateCreated"><g:message code="report.dateCreated.label" default="Date Created" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: reportInstance, field: 'dateCreated', 'errors')}">
+                                    <g:datePicker name="dateCreated" precision="day" value="${reportInstance?.dateCreated}"  />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="lastUpdated"><g:message code="report.lastUpdated.label" default="Last Updated" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: reportInstance, field: 'lastUpdated', 'errors')}">
+                                    <g:datePicker name="lastUpdated" precision="day" value="${reportInstance?.lastUpdated}"  />
+                                </td>
+                            </tr>
                         
                         </tbody>
                     </table>
                 </div>
                 <div class="buttons">
-                    <span class="button"><g:actionSubmit class="save" value="Update" /></span>
-                    <span class="button"><g:actionSubmit class="delete" onclick="return confirm('Are you sure?');" value="Delete" /></span>
+                    <span class="button"><g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" /></span>
+                    <span class="button"><g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" /></span>
                 </div>
             </g:form>
         </div>
