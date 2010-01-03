@@ -2,6 +2,7 @@
     <head>
         <title>Welcome to Grails</title>
 		<meta name="layout" content="main" />
+		<!-- <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/CTIS/iwebkit"> -->
 		<style type="text/css" media="screen">
 
 			#nav {
@@ -51,12 +52,15 @@
 		</style>
     </head>
     <body>
+ 
+ 
 		<div id="nav">
 			<div class="homePagePanel">
 				<div class="panelTop">
 
 				</div>
 				<div class="panelBody">
+				
 					<h1>Application Status</h1>
 					<ul>
 						<li>App version: <g:meta name="app.version"></g:meta></li>
