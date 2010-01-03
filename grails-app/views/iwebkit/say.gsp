@@ -7,7 +7,7 @@
 		<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
 		<link href="/CTIS/Framework/css/style.css" rel="stylesheet" type="text/css" />
 		<script src="/CTIS/Framework/javascript/functions.js" type="text/javascript"></script>
-  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAnGpifcTyPEhEhb5IwFOjbhSKxM24ZlyNZgLKBcZWsVdveIArVBQeFEasr_Ised3Jg_JcOMYzbXQiFg" type="text/javascript"></script>	
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAnGpifcTyPEhEhb5IwFOjbhRaCOl_N0WlA2IcvoDFRX1zz5eA_hRmB_SlcA3uSAF61ro9iA7PyHgDaA" type="text/javascript"></script>	
 		<script type="text/javascript" charset="utf-8">
 		    var map;
 		    var geocoder;
@@ -19,7 +19,8 @@
 			  getLocation();
 		    }
 
-			function getLocation() {
+			function getLocation() 
+			{
 				if (useragent.indexOf('Firefox') != -1) {
 					browser = 'Firefox';
 				} else if (useragent.indexOf('iPhone') != -1) {
@@ -124,20 +125,13 @@
 						<li class="form"><button name="button">Send</button></li>
 
 						</ul>
-					
-					<span class="graytitle">Geo Location (please don't change)</span><ul class="pageitem">
-							<li class="form">                                   
-							  <input type="text" id="latitude" name="latitude" value="14.11101" />	
-							</li>
-							<li class="form">
-							  <input type="text" id="longitude" name="longitude" value="100.00125" />
-							</li>
-							<li class="form">
-								 <input type="text" id="accuracy" name="accuracy" value="10" />
-							</li>
-
-					</ul>				
-		</div>
+							 <input type="hidden" id="latitude" name="latitude" value="14.11101" />	
+							 <input type="hidden" id="longitude" name="longitude" value="100.00125" />
+							 <input type="hidden" id="accuracy" name="accuracy" value="10" />
+							 <input type="hidden" id="heading" name="heading" value="-1" />
+							 <input type="hidden" id="speed" name="speed" value="-1" />
+							 <input type="hidden" id="locationName" name="locationName" value="Unknown Location" />
+					</div>
 		</g:form>
 		<div id="footer">
 			<a href="http://iwebkit.net"></a></div>
