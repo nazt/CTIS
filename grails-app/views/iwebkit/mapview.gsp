@@ -14,7 +14,8 @@
 	 * other.
 	 */
 	var beaches = [
-	 <g:each in="${reportInstanceList}" status="i" var="reportInstance">["${reportInstance.congestion_cause?.iconName}", ${reportInstance.latitude},${reportInstance.longitude}, ${reportInstance.id},"${reportInstance.message.trim()}"],</g:each>];
+	 <g:each in="${reportInstanceList}" status="i" var="reportInstance">["${reportInstance.congestion_cause?.iconName}", ${reportInstance.latitude.toString()},${reportInstance.longitude.toString()}, ${reportInstance.id},"${reportInstance?.congestion_level?.info.trim()}","${reportInstance?.congestion_cause?.reason.trim()}","${reportInstance.message.toString().trim()}","${reportInstance.dateCreated.toString().trim()[0..10]
+	}","${reportInstance.dateCreated.toString().trim()[11..18]}"],</g:each>];
 	var image=Array;
   	var geocoder;
   	var map;
@@ -36,7 +37,8 @@
     var myOptions = {
       zoom: 9,
       center: latlng,
-    	navigationControl: false,
+    navigationControl: true,
+    navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
 		scaleControl: true,
 	  mapTypeControl: true,
 	    mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
@@ -77,7 +79,7 @@
 		        title: beach[0],
 		        zIndex: beach[3]
 		    });
-			bindInfoWindow(marker, map,  infoWindow,  beach[4]);
+			bindInfoWindow(marker, map,  infoWindow,  "<b>ระดับ :</b> " +beach[4]+"<br><b>สาเหตุ:</b> " +beach[5]+"<br><b>ข้อความ:</b> " +beach[6] +"<br><b>เวลา:</b> " +beach[8]+"<br><b>วันที่:</b> " +beach[7]  );
 		}
 	}
     function bindInfoWindow(marker, map, infoWindow, html) {
