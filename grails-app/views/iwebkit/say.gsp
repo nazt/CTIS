@@ -12,6 +12,7 @@
 		    var map;
 		    var geocoder;
 		    var address;
+			var useragent = navigator.userAgent,browser;
 
 		    function load() {
 		      geocoder = new GClientGeocoder();
@@ -19,7 +20,27 @@
 		    }
 
 			function getLocation() {
-			    navigator.geolocation.getCurrentPosition(displayLocation, handleError, {maximumAge:600000, timeout:0, enableHighAccuracy:true});
+				if (useragent.indexOf('Firefox') != -1) {
+					browser = 'Firefox';
+				} else if (useragent.indexOf('iPhone') != -1) {
+					browser = 'iPhone';
+				} else if (useragent.indexOf('Android') != -1) {
+					browser = 'Android';
+				} else if (useragent.indexOf('Pre') != -1) {
+					browser = 'Pre';
+				} else {
+					browser = 'Unknown Browser';
+				}
+
+				if (navigator.geolocation) {				
+				if (browser === 'iPhone' || browser === 'Android' || browser === 'Pre') {
+							navigator.geolocation.watchPosition(displayLocation, handleError, {maximumAge:5000, timeout:0, enableHighAccuracy:true});
+				} else {
+							navigator.geolocation.getCurrentPosition(displayLocation, handleError, {maximumAge:5000, timeout:0, enableHighAccuracy:true});
+						}
+					} else {
+						alert('Sorry, this browser is NOT location aware.');
+					}
 			}
 			function displayLocation(position) {
 				        latitude = position.coords.latitude;
