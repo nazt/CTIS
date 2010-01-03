@@ -142,8 +142,17 @@
 		alert('Found location: ' + lat + ', ' + long+ ', '); 
 		}
 
-		function handleError(error) {
-		    alert('Error during location: ' + error.code + ' ' + error.message);
+		function handleError(error){
+			switch (error.code){
+				case error.PERMISSION_DENIED:
+					alert('Sorry. Permission to find your location has been denied.');
+					break;
+				case error.POSITION_UNAVAILABLE:
+					alert('Sorry. Position unavailable.');
+					break;
+				default:
+					alert('Error code: ' + error.code);
+			}
 		}
 		</script>	
 		<title>Adjust your Location  </title>
