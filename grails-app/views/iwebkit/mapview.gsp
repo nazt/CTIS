@@ -18,11 +18,9 @@
 	 * other.
 	 */
 	var beaches = [
-	  ['santa', -33.890542, 151.274856, 4],
-	  ['accident', -33.923036, 151.259052, 5],
-	  ['raining', -34.028249, 151.157507, 3],
-	  ['raining', -33.80010128657071, 151.28747820854187, 2],
-	  ['santa', -33.950198, 151.259302, 1]
+	 <g:each in="${reportInstanceList}" status="i" var="reportInstance">
+	 ["${reportInstance.congestion_cause?.iconName}", ${reportInstance.latitude},${reportInstance.longitude}, ${reportInstance.id},"${reportInstance.message.trim()}"],
+	</g:each>
 	];
 	var image=Array;
   var geocoder;
@@ -30,9 +28,9 @@
   function load() {
  window.scrollTo(0, 0.9);
     geocoder = new google.maps.Geocoder();
-    var latlng = new google.maps.LatLng(-34.397, 150.644);
+    var latlng = new google.maps.LatLng(13.744456,100.533272);
     var myOptions = {
-      zoom: 8,
+      zoom: 9,
       center: latlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
@@ -44,13 +42,11 @@
   function codeAddress() {
     var address = document.getElementById("address").value;
     if (geocoder) {
+
       geocoder.geocode( { 'address': address}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
           map.setCenter(results[0].geometry.location);
-          var marker = new google.maps.Marker({
-              map: map, 
-              position: results[0].geometry.location
-          });
+		  map.setZoom(12); 
         } else {
           alert("Geocode was not successful for the following reason: " + status);
         }
@@ -62,27 +58,39 @@
 	{
 	 	var infoWindow = new google.maps.InfoWindow;
 
-	  	image['santa'] = new google.maps.MarkerImage('/CTIS/markers/santa_image.png',
+	  // 
+	  // 	image['santa'] = new google.maps.MarkerImage('/CTIS/markers/santa_image.png',
+	  //     // This marker is 20 pixels wide by 32 pixels tall.
+	  //     new google.maps.Size(20, 32),
+	  //     // The origin for this image is 0,0.
+	  //     new google.maps.Point(0,0),
+	  //     // The anchor for this image is the base of the flagpole at 0,32.
+	  //     new google.maps.Point(0, 32));
+	  // image['accident'] = new google.maps.MarkerImage('/CTIS/markers/accident/image.png',
+	  //     // This marker is 20 pixels wide by 32 pixels tall.
+	  //     new google.maps.Size(50, 32),
+	  //     // The origin for this image is 0,0.
+	  //     new google.maps.Point(0,0),
+	  //     // The anchor for this image is the base of the flagpole at 0,32.
+	  //     new google.maps.Point(0, 32));	
+	  // image['raining'] = new google.maps.MarkerImage('/CTIS/markers/raining/image.png',
+	  //     // This marker is 20 pixels wide by 32 pixels tall.
+	  //     new google.maps.Size(64, 64),
+	  //     // The origin for this image is 0,0.
+	  //     new google.maps.Point(0,0),
+	  //     // The anchor for this image is the base of the flagpole at 0,32.
+	  //     new google.maps.Point(0, 32));
+	  // <g:each var="icon" in="${congestionCauseInstanceList}">
+
+	  	image['${icon.iconName}'] = new google.maps.MarkerImage('/CTIS/markers/${icon.iconName}/image.png',
 	      // This marker is 20 pixels wide by 32 pixels tall.
 	      new google.maps.Size(20, 32),
 	      // The origin for this image is 0,0.
 	      new google.maps.Point(0,0),
 	      // The anchor for this image is the base of the flagpole at 0,32.
-	      new google.maps.Point(0, 32));
-	  image['accident'] = new google.maps.MarkerImage('/CTIS/markers/accident/image.png',
-	      // This marker is 20 pixels wide by 32 pixels tall.
-	      new google.maps.Size(50, 32),
-	      // The origin for this image is 0,0.
-	      new google.maps.Point(0,0),
-	      // The anchor for this image is the base of the flagpole at 0,32.
-	      new google.maps.Point(0, 32));	
-	  image['raining'] = new google.maps.MarkerImage('/CTIS/markers/raining/image.png',
-	      // This marker is 20 pixels wide by 32 pixels tall.
-	      new google.maps.Size(64, 64),
-	      // The origin for this image is 0,0.
-	      new google.maps.Point(0,0),
-	      // The anchor for this image is the base of the flagpole at 0,32.
-	      new google.maps.Point(0, 32));
+	      new google.maps.Point(0, 32));		
+	</g:each>
+	
 	  for (var i = 0; i < locations.length; i++) 
 		{
 	    	var beach = locations[i];
@@ -94,7 +102,7 @@
 		        title: beach[0],
 		        zIndex: beach[3]
 		    });
-			bindInfoWindow(marker, map,  infoWindow, "wtf"+i);
+			bindInfoWindow(marker, map,  infoWindow,  beach[4]);
 		}
 	}
     function bindInfoWindow(marker, map, infoWindow, html) {
@@ -103,12 +111,14 @@
         infoWindow.open(map, marker);
       });
     }
+
 </script>
 	
 	
 </head>
 
 <body onload="load();">
+
 	<div id="topbar">
 		<div id="title">
 			Map View</div>
@@ -120,9 +130,9 @@
 	</div>
 	
 	<div id="content">
-			<span class="graytitle"><input id="address" type="textbox" value="สยามพารากอน">
-		    <a href="#" onclick="codeAddress()">Search</a></span><ul class="pageitem">
-
+			<span class="graytitle">Search : <input id="address" type="textbox" value="Thammasat"	>
+		    <img alt="list" src="/CTIS/Framework/thumbs/mapsearch.png" width="20" height="18" id="mapicon" name="mapicon" onclick="codeAddress()"/></span><ul class="pageitem">
+				
 			<div id="map_canvas" style="width: 400px; height: 300px; border: 1px solid #666666;"></div>
 	</div>
 			 
