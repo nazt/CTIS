@@ -26,7 +26,7 @@
 	<li class="title">Traffic  Report</li>
 	 <g:each in="${reportInstanceList}" status="i" var="reportInstance">
 			<li class="withimage " >
-					<a class="noeffect" href="">
+					<a class="noeffect" href="show/${reportInstance?.id}">
 					<img src="/CTIS/Framework/images/${reportInstance?.congestion_cause?.iconName}${reportInstance?.congestion_level?.colour}" alt="${reportInstance?.congestion_cause?.iconName}"/>
 					<span class="name">${fieldValue(bean:reportInstance,field:'message')}</span>
 					<span class="comment">Thailand<br>
