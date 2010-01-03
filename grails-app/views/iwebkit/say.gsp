@@ -30,53 +30,46 @@
 					browser = 'Pre';
 				} else {
 					browser = 'Unknown Browser';
-				}
-
-				if (navigator.geolocation) {				
-				if (browser === 'iPhone' || browser === 'Android' || browser === 'Pre') {
-							navigator.geolocation.watchPosition(displayLocation, handleError, {maximumAge:5000, timeout:0, enableHighAccuracy:true});
-				} else {
-							navigator.geolocation.getCurrentPosition(displayLocation, handleError, {maximumAge:5000, timeout:0, enableHighAccuracy:true});
-						}
-					} else {
-						alert('Sorry, this browser is NOT location aware.');
+				} //end first if
+				if (navigator.geolocation)
+				{	
+					if (browser === 'iPhone' || browser === 'Android' || browser === 'Pre') 
+					{
+						navigator.geolocation.watchPosition(displayLocation, handleError, {maximumAge:5000, timeout:0, enableHighAccuracy:true});
+					} 
+					else {
+						navigator.geolocation.getCurrentPosition(displayLocation, handleError, { maximumAge:5000, timeout:0, enableHighAccuracy:true});
 					}
+				}else
+				{
+					document.getElementById('address').innerText = "Browser Not Support!";	
+					alert('Sorry, this browser is NOT location aware. -> ' + browser+useragent );
+				}
 			}
 			function displayLocation(position) {
 				        latitude = position.coords.latitude;
 				        longitude = position.coords.longitude;
 				        accuracy = position.coords.accuracy;
-					    document.forms[0].accuracy.value = accuracy ;
 				        speed = position.coords.speed;
+						heading=position.coords.heading;
+					    document.forms[0].accuracy.value = accuracy ;
 					    document.forms[0].latitude.value = latitude;
-					    document.forms[0].longitude.value = longitude;				
+					    document.forms[0].longitude.value = longitude;	
+					    document.forms[0].speed.value = speed;	
+					    document.forms[0].heading.value = heading;								
 						var latlng =new GLatLng(latitude, longitude);
    						geocoder.getLocations(latlng, showAddress);						
 			}
 		    function showAddress(response) {
-		     
 		      if (!response || response.Status.code != 200) {
 			 	document.getElementById('address').innerText = "unknown location";		
+			 					
 		        alert("Status Code:" + response.Status.code);
 		      } else {
 		        place = response.Placemark[0];
-		        // point = new GLatLng(place.Point.coordinates[1],
-		        //                     place.Point.coordinates[0]);
-				// alert( place.address );
 				   document.getElementById('address').innerText = place.address;
+				   document.forms[0].locationName.value=place.address;	
 				   document.mapicon.src = "/CTIS/Framework/thumbs/mapsearched.png";
-
-
-		        // marker = new GMarker(point);
-		        // map.addOverlay(marker);
-		        // marker.openInfoWindowHtml(
-		        // '<b>orig latlng:</b>' + response.name + '<br/>' + 
-		        // '<b>latlng:</b>' + place.Point.coordinates[1] + "," + place.Point.coordinates[0] + '<br>' +
-		        // '<b>Status Code:</b>' + response.Status.code + '<br>' +
-		        // '<b>Status Request:</b>' + response.Status.request + '<br>' +
-		        // '<b>Address:</b>' + place.address + '<br>' +
-		        // '<b>Accuracy:</b>' + place.AddressDetails.Accuracy + '<br>' +
-		        // '<b>Country code:</b> ' + place.AddressDetails.Country.CountryNameCode);
 		      }
 		}					
 			function handleError(error) {
