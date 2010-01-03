@@ -37,7 +37,7 @@ environments {
  production {
   dataSource {
    dbCreate = "update"
-                        url="jdbc:postgresql://localhost:5432/grails"
+                        url="jdbc:postgresql://localhost:5432/ctis"
                         username = "grails"
                         password = "grails"
   }
