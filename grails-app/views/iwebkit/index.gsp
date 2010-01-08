@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta content="yes" name="apple-mobile-web-app-capable" />
-		<meta content="index,follow" name="robots" /><meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+		<meta content="index,follow" name="robots" />
+		<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
 		<link href="http://iwebkit.net/apple-touch-icon.png" rel="apple-touch-icon" />
 		<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
 		<link href="/CTIS/Framework/css/style.css" rel="stylesheet" type="text/css" />
@@ -27,7 +28,7 @@
 			<img alt="store" src="/CTIS/Framework/thumbs/view.png" /><span class="name">View</span><span class="arrow"></span></a></li>
 			<li class="menu"><a href="/CTIS/iwebkit/mapview">
 			<img alt="popup" src="/CTIS/Framework/thumbs/map2.png" /><span class="name">Map</span><span class="comment">Map View!</span> </a></li>
-			<li class="menu"><a href="fullscreen.html">
+			<li class="menu"><a href="/CTIS/iwebkit/about">
 			<img alt="fullscreen" src="/CTIS/Framework/thumbs/about.png" /><span class="name">About</span><span class="comment">Exclusive!</span> </a></li>
 		</ul>
 		<!-- <span class="graytitle">Outgoing Links</span><ul class="pageitem">
@@ -36,30 +37,7 @@
 			iWebKit Blog</span><span class="comment">embedded!</span><span class="arrow"></span></a></li>
 		</ul> -->
 	</div>
-	<ul id="post-options">
-			<!-- <li>
-				<a id="oprev" href="http://news.iwebkit.net/?p=95" />
-			</li>
-			<li>
-				<a id="omail" onclick="return confirm('Mail a link to this post?');" href="mailto:?subject=iWebKit Blog- New homepage!&amp;body=Check out this post:%20http://news.iwebkit.net/?p=96"/>
-			</li>
-			<li>
-				<a id="otweet" onclick="$wptouch('#twitter-box').slideToggle(300);" href="javascript:return false;"/>
-			</li>
-			<li>
-				<a id="obook" onclick="$wptouch('#bookmark-box').slideToggle(300);" href="javascript:return false;"/>
-			</li>
-			<li>
-				<a id="osearch" href="javascript:var%20db=document.body,sb='%3Cspan%20style=\'background-color:#FFFF00;\'%3E',tm=prompt('Find%20text%20on%20this%20page:'),sm='/('+escape(tm)+')/gi',se='%3C/span%3E';void(db.innerHTML=db.innerHTML.replace(eval(sm),sb+'$1'+se));"/>
-			</li>
-			<li>
-				<a id="otext" onclick="wptouch_toggle_text();" href="javascript:return false;"/>
-			</li>
-			<li>
-				<a id="onext" href="http://news.iwebkit.net/?p=97"/>
-			</li> -->
-		</ul>
 	<div id="footer">
-		<a href="http://iwebkit.net"> </a></div>
+		<a href="http://www.together.in.th"> </a></div>
 </body>
 </html>
