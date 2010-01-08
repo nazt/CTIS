@@ -2,7 +2,7 @@
     <head>
         <title>Welcome to Grails</title>
 		<meta name="layout" content="main" />
-		<!-- <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/CTIS/iwebkit"> -->
+		<META HTTP-EQUIV="Refresh" CONTENT="0;URL=/CTIS/iwebkit">
 		<style type="text/css" media="screen">
 
 			#nav {
