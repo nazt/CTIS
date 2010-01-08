@@ -128,7 +128,7 @@
 								        });
 
 								        GEvent.addListener(marker, "dragend", function() {
-								        marker.openInfoWindowHtml("Just bouncing along..."+ this.getLatLng()); //
+								        marker.openInfoWindowHtml(""+ this.getLatLng()); //
 								        });
 
 								        map.addOverlay(marker);
@@ -170,9 +170,9 @@
 		</div>
 		<div id="content">
 				<span class="graytitle">Location</span><ul class="pageitem">
-				<div id="map" style="width: 400px; height: 300px; border: 1px solid #666666;"></div>
+				<div id="map" style="width: 300px; height: 300px; border: 1px solid #666666;"></div>
 		</div>
 				 
-		<div id="footer">	<a href="http://iwebkit.net"></a></div>
+		<div id="footer">	<a href="http://www.together.in.th"></a></div>
 	</body>
 </html>
