@@ -45,6 +45,8 @@
 				{
 					document.getElementById('address').innerText = "Browser Not Support!";	
 					alert('Sorry, this browser is NOT location aware. -> ' + browser );
+					history.go(-1);
+
 				}
 			}
 			function displayLocation(position) {
@@ -76,6 +78,7 @@
 			function handleError(error) {
 				document.getElementById('address').innerText = "GPS Error! Please Check Location Service.";
 			    alert('Error during location: ' + error.code + ' ' + error.message + ' Please Check Location Service. ');
+				history.go(-1);
 			}
 		</script>
 		<title>Share  </title><meta content="Community-gnerated Traffic Information System" name="description" />
@@ -111,7 +114,7 @@
 								
 				<span class="graytitle">สาเหตุ</span><ul class="pageitem">
 						<li class="form">                                   
-							 <g:select optionKey="id" from="${CongestionCause.list()}" name="congestion_cause.id" value="${reportInstance?.congestion_cause?.id}" ></g:select>
+							 <g:select optionKey="id" from="${CongestionCause.list().sort{it.reason}.reverse()}" name="congestion_cause.id" value="${reportInstance?.congestion_cause?.id}" ></g:select>
 							<span class="arrow"></span> 
 						</li>
 				</ul>
