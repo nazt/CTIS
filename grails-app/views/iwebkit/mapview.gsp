@@ -41,6 +41,7 @@
     navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
 		scaleControl: true,
 	  mapTypeControl: true,
+	disableDoubleClickZoom: false,
 	    mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }

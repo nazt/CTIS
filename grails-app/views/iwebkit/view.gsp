@@ -27,6 +27,13 @@
 					<span class="arrow"></span>
 				</a>
 			</li>
+			<li class="menu">
+				<a href="/CTIS/iwebkit/twitterlist">
+					<img alt="music" src="/CTIS/Framework/thumbs/twitterView.png" />
+					<span class="name">Twitter View</span>
+					<span class="arrow"></span>
+				</a>
+			</li>			
 		</ul>
 	</div>
  
