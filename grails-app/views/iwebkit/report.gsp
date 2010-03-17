@@ -8,7 +8,7 @@
 	<link href="/CTIS/Framework/css/style.css" rel="stylesheet" type="text/css" />
 	<script src="/CTIS/Framework/javascript/functions.js" type="text/javascript"></script>
  	<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false
-	    &amp;key=ABQIAAAAnGpifcTyPEhEhb5IwFOjbhSKxM24ZlyNZgLKBcZWsVdveIArVBQeFEasr_Ised3Jg_JcOMYzbXQiFg"
+	    &amp;key=ABQIAAAAnGpifcTyPEhEhb5IwFOjbhR1wSRVmMbOrujw8e51Mx44QJJHQBTy8LTe7VSHRgo7P2RqStjh2W6T8g"
 	    type="text/javascript">
 	</script>
 

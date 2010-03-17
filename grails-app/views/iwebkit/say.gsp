@@ -7,7 +7,7 @@
 		<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
 		<link href="/CTIS/Framework/css/style.css" rel="stylesheet" type="text/css" />
 		<script src="/CTIS/Framework/javascript/functions.js" type="text/javascript"></script>
-  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAnGpifcTyPEhEhb5IwFOjbhSKxM24ZlyNZgLKBcZWsVdveIArVBQeFEasr_Ised3Jg_JcOMYzbXQiFg" type="text/javascript"></script>	
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAnGpifcTyPEhEhb5IwFOjbhR1wSRVmMbOrujw8e51Mx44QJJHQBTy8LTe7VSHRgo7P2RqStjh2W6T8g" type="text/javascript"></script>	
 		<script type="text/javascript" charset="utf-8">
 		    var map;
 		    var geocoder;
