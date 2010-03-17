@@ -59,6 +59,8 @@
 					    document.forms[0].latitude.value = latitude;
 					    document.forms[0].longitude.value = longitude;	
 					    document.forms[0].speed.value = speed;	
+						if(speed=="NaN")
+							document.forms[0].speed.value=0
 					    document.forms[0].heading.value = heading;								
 						var latlng =new GLatLng(latitude, longitude);
    						geocoder.getLocations(latlng, showAddress);						
