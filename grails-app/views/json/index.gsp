@@ -18,7 +18,7 @@
 
 	<div id="topbar">
 		<div id="title">
-			View Option</div>
+			ป้ายจราจรอัจฉริยะ</div>
 		<div id="leftnav">
 			<a href="/CTIS/iwebkit/view"><img src="/CTIS/Framework/images/home.png" alt="home"/></a>
 		</div>
