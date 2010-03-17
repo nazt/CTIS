@@ -22,7 +22,7 @@
 
 	<div id="topbar">
 		<div id="title">
-			Map View</div>
+			ข้อมูลบนแผนที่</div>
 			
 		<div id="leftnav">
 			<a href="/CTIS/iwebkit/listview"><img src="/CTIS/Framework/images/home.png" alt="say"/></a>

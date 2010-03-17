@@ -49,9 +49,9 @@
 
 	<div id="topbar">
 		<div id="title">
-			View Option</div>
+			รายการข้อมูล</div>
 		<div id="leftnav">
-			<a href="/CTIS/iwebkit/view"><img src="/CTIS/Framework/images/home.png" alt="home"/></a>
+			<a href="/CTIS/iwebkit/view">Back</a>
 		</div>
 	</div>
 <div id="content">

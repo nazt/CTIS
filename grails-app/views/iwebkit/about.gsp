@@ -5,9 +5,9 @@
 
 	<div id="topbar">
 		<div id="title">
-			View Option</div>
+			ลิขสิทธิ์</div>
 		<div id="leftnav">
-			<a href="/CTIS/iwebkit/index"><img src="/CTIS/Framework/images/home.png" alt="home"/></a>
+			<a href="/CTIS/iwebkit/index">Back</a>
 		</div>
 	</div>
 	<div id="content">

@@ -99,22 +99,22 @@
 
 	<div id="topbar">
 		<div id="title">
-			Map View</div>
+			ข้อมูลบนแผนที่</div>
 			
 		<div id="leftnav">
-			<a href="/CTIS/iwebkit/view"><img src="/CTIS/Framework/images/home.png" alt="say"/></a>
+			<a href="/CTIS/iwebkit/view">Back</a>
 		</div>
 		
 	</div>
 	
 	<div id="content">
-			<span class="graytitle">Search : <input id="address" type="textbox" value="Thammasat" onclick = "this.value='';" TITLE="Search"	>
+			<span class="graytitle">ค้นหา  <input id="address" type="textbox" value="Thammasat" onclick = "this.value='';" TITLE="Search"	>
 		    <img alt="list" src="/CTIS/Framework/thumbs/mapsearch.png" width="20" height="18" id="mapicon" name="mapicon" onclick="codeAddress()"/></span><ul class="pageitem">
 				
 			<div id="map_canvas" style="width: 300px; height: 300px; border: 1px solid #666666;"></div>
 	</div>
 			 
-	<div id="footer">	<a href="http://iwebkit.net"></a></div>	
+	<div id="footer"> </div>	
 
   
 </body>

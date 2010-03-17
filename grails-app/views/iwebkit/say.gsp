@@ -81,24 +81,25 @@
 				history.go(-1);
 			}
 		</script>
-		<title>Share  </title><meta content="Community-gnerated Traffic Information System" name="description" />
+		<title>แจ้งรถติด  </title>
+		<meta content="Community-gnerated Traffic Information System" name="description" />
 	</head>
 	<body onload="iWebkit();load()">
 
 		<div id="topbar">
 			<div id="title">
-				Say</div>
-			<div id="leftnav">
-				<a href="/CTIS/iwebkit/index"><img src="/CTIS/Framework/images/home.png" alt="home"/></a>
+				แจ้งสภาพจราจร</div>
+			<div id="leftnav" >
+				<a href="/CTIS/iwebkit/index">Back</a>
 			</div>
 		</div>
 		<div id="content">
 
-			<span class="graytitle">Location</span><ul class="pageitem">
+			<span class="graytitle">สถานที่</span><ul class="pageitem">
  
 				<li class="menu"><a href="/CTIS/iwebkit/map">		
 				<img alt="list" src="/CTIS/Framework/thumbs/mapsearch.png" id="mapicon" name="mapicon"/>
-				<span class="name" id="address">Resolving ... </span><span class="comment">Adjust..</span><span class="arrow"></span></a></li>
+				<span class="name" id="address">Resolving ... </span><span class="comment"></span><span class="arrow"></span></a></li>
 			
 				</ul>	
 				<g:form method="post" url="[action:'isave',controller:'report']" >
@@ -121,11 +122,11 @@
 
 
 
-				<span class="graytitle">ข้อความ.. (optional)</span><ul class="pageitem">
+				<span class="graytitle">ข้อความ.. (ทางเลือก)</span><ul class="pageitem">
 						<li class="textbox"><textarea name="message" id="message"></textarea></li>
 					</ul>
 					<ul class="pageitem">
-						<li class="form"><button name="button">Send</button></li>
+						<li class="form"><button name="button">ส่งข้อมูล</button></li>
 
 						</ul>
 							 <input type="hidden" id="latitude" name="latitude" value="14.11101" />	

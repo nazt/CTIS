@@ -5,35 +5,43 @@
 
 	<div id="topbar">
 		<div id="title">
-			View Option</div>
+			รูปแบบการแสดงผล</div>
 		<div id="leftnav">
-			<a href="/CTIS/iwebkit/index"><img src="/CTIS/Framework/images/home.png" alt="home"/></a>
+			<a href="/CTIS/iwebkit/index">Back</a>
 		</div>
+
 	</div>
 	<div id="content">
-		<span class="graytitle">View Option</span><ul class="pageitem">
+		<span class="graytitle">รายการรูปแบบการแสดงผล</span><ul class="pageitem">
 			<li class="menu">
 				<a href="listview">
 					<img alt="list" src="/CTIS/Framework/thumbs/listview.png" />
-					<span class="name">List View</span>
-					<span class="comment"> List of messages.</span>
+					<span class="name">แบบรายการ</span>
+					<span class="comment"></span>
 					<span class="arrow"></span>
 				</a>
 			</li>
 			<li class="menu">
 				<a href="/CTIS/iwebkit/mapview">
 					<img alt="music" src="/CTIS/Framework/thumbs/mapview.png" />
-					<span class="name">Map View</span>
+					<span class="name">แบบแผนที่</span>
 					<span class="arrow"></span>
 				</a>
 			</li>
 			<li class="menu">
 				<a href="/CTIS/iwebkit/twitterlist">
 					<img alt="music" src="/CTIS/Framework/thumbs/twitterView.png" />
-					<span class="name">Twitter View</span>
+					<span class="name">จากทวิตเตอร์</span>
 					<span class="arrow"></span>
 				</a>
-			</li>			
+			</li>		
+			<li class="menu">
+				<a href="/CTIS/vms/">
+					<img alt="music" src="/CTIS/Framework/thumbs/vmsMenu.png" />
+					<span class="name">ป้ายจราจรอัจฉริยะ</span>
+					<span class="arrow"></span>
+				</a>
+			</li>				
 		</ul>
 	</div>
  
