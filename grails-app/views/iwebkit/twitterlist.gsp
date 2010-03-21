@@ -10,7 +10,7 @@
 	<script src="/CTIS/Framework/javascript/functions.js" type="text/javascript"></script>
  
 		
-<title>Traffic ListView Report</title>
+<title>ระบบรายงานสภาพจราจรโดยเครือข่ายผู้ใช้งาน</title>
 <meta content="iPod,iPhone,Webkit,iWebkit,Website,Create,mobile,Tutorial,free" name="keywords" />
 <meta content="Community-generated Traffic Information System" name="description" /></head>
 
@@ -35,7 +35,7 @@
 				</a>
 			</li>
 		  </g:each>
-		<li class=" autolisttext  "><a href="#" class="noeffect">Show 10 more items...</a></li>
+		<li class=" autolisttext  "><a href="#" class="noeffect">-- 10 รายการถัดไป --</a></li>
 	</ul>
 </div>
  

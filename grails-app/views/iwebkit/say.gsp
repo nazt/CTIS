@@ -83,7 +83,7 @@
 				history.go(-1);
 			}
 		</script>
-		<title>แจ้งรถติด  </title>
+		<title>ระบบรายงานสภาพจราจรโดยเครือข่ายผู้ใช้งาน</title>
 		<meta content="Community-gnerated Traffic Information System" name="description" />
 	</head>
 	<body onload="iWebkit();load()">

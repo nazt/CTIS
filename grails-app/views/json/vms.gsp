@@ -9,9 +9,7 @@
 	<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
 	<link href="/CTIS/Framework/css/style.css" rel="stylesheet" type="text/css" />
 	<script src="/CTIS/Framework/javascript/functions.js" type="text/javascript"></script>
- 
-		
-<title>Traffic VMS</title>
+<title>ระบบรายงานสภาพจราจรโดยเครือข่ายผู้ใช้งาน</title>
 <meta content="iPod,iPhone,Webkit,iWebkit,Website,Create,mobile,Tutorial,free" name="keywords" />
 <meta content="Community-generated Traffic Information System" name="description" /></head>
 

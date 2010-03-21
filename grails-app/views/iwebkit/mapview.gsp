@@ -93,7 +93,7 @@
 
 </script>
 	
-	
+	<title>ระบบรายงานสภาพจราจรโดยเครือข่ายผู้ใช้งาน</title>
 </head>
 
 <body onload="load();">
@@ -103,7 +103,7 @@
 			ข้อมูลบนแผนที่</div>
 			
 		<div id="leftnav">
-			<a href="/CTIS/iwebkit/view">Back</a>
+			<a href="javascript:history.back();">Back</a>
 		</div>
 		
 	</div>

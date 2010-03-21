@@ -11,7 +11,7 @@
 	<script src="/CTIS/Framework/javascript/functions.js" type="text/javascript"></script>
  
 		
-<title>Traffic VMS</title>
+<title>ระบบรายงานสภาพจราจรโดยเครือข่ายผู้ใช้งาน</title>	
 <meta content="iPod,iPhone,Webkit,iWebkit,Website,Create,mobile,Tutorial,free" name="keywords" />
 <meta content="Community-generated Traffic Information System" name="description" /></head>
 
