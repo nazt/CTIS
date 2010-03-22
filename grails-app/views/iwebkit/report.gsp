@@ -31,7 +31,7 @@
 	</div>
 	
 	<div id="content">
-			<span class="graytitle"></span><ul class="pageitem">
+			 <ul class="pageitem">
 				
 			<div id="map" style="width: 300px; height: 300px; border: 1px solid #666666;"></div>
 	</div>
