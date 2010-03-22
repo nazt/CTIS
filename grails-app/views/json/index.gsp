@@ -10,7 +10,7 @@
 	<script src="/CTIS/Framework/javascript/functions.js" type="text/javascript"></script>
  
 		
-<title>Traffic ListView Report</title>
+<title>Traffic Report via VMS</title>
 <meta content="iPod,iPhone,Webkit,iWebkit,Website,Create,mobile,Tutorial,free" name="keywords" />
 <meta content="Community-generated Traffic Information System" name="description" /></head>
 
@@ -26,12 +26,12 @@
 <div id="content">
  <ul class="autolist">
 	<li class="title">Traffic  Report</li>
-	 <g:each in="${roadKey}" status="i" var="linkid">
+	 <g:each in="${keySet}" status="i" var="linkid">
 			<li class="autolist " >
-					<a class="noeffect" href="#">
-					
-					<span class="name">${roadData.get(linkid).road_start} ถึง ${roadData.get(linkid).road_end} (~${roadData.get(linkid).distance.tokenize(".").get(0) as Integer}m)</span>
-	
+					<a class="noeffect" href="/CTIS/json/vms/${linkid}">
+
+					<span class="name">${roads.get(linkid).road_start} ถึง ${roads.get(linkid).road_end} (~${roads.get(linkid).distance.tokenize(".").get(0) as Integer}m)</span>
+
 				</a>
 			</li>
 		  </g:each>
