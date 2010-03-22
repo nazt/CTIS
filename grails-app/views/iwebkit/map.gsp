@@ -88,8 +88,14 @@
 		function load() {
 				iWebkit();
 		    if (isCompatible) {
+
+						
 		        // Create Map
 		        map = new GMap2(document.getElementById("map"));
+				var mapControl = new GMapTypeControl();
+				map.addControl(mapControl);
+				map.addControl(new GLargeMapControl());
+						
 		        map.setCenter(new GLatLng(100.58,14.06), 6);
 		    }
 		}
@@ -155,7 +161,7 @@
 			}
 		}
 		</script>	
-		<title>Adjust your Location  </title>
+<title>ระบบรายงานสภาพจราจรโดยเครือข่ายผู้ใช้งาน</title>
 		<meta content="Community-gnerated Traffic Information System" name="description" />
 	</head>
 	<body onload="load();getLocation();" onunload="GUnload()">
@@ -165,7 +171,7 @@
 			<div id="title">
 				Adjust</div>
 			<div id="leftnav">
-				<a href="/CTIS/iwebkit/say"><img src="/CTIS/Framework/images/home.png" alt="say"/></a>
+				<a href="/CTIS/iwebkit/say">Back</a>
 			</div>
 		</div>
 		<div id="content">
