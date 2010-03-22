@@ -10,7 +10,7 @@
 	<script src="/CTIS/Framework/javascript/functions.js" type="text/javascript"></script>
  
 		
-<title>ป้ายจราจรอัจฉริยะ</title>
+<title>ระบบรายงานสภาพจราจรโดยเครือข่ายผู้ใช้งาน</title>
 <meta content="iPod,iPhone,Webkit,iWebkit,Website,Create,mobile,Tutorial,free" name="keywords" />
 <meta content="Community-generated Traffic Information System" name="description" /></head>
 
@@ -20,7 +20,7 @@
 		<div id="title">
 			ป้ายจราจรอัจฉริยะ</div>
 		<div id="leftnav">
-						<a href="/CTIS/iwebkit/view">Back</a>
+						<a href="/CTIS/iwebkit/">Back</a>
 		</div>
 	</div>
 <div id="content">
@@ -32,12 +32,12 @@
 					<img src="http://a.traffy.in.th/s/${roads.get(linkid).vms_url} " alt="${reportInstance?.congestion_cause?.iconName}"/>
 					<span class="name">
 					${roads.get(linkid).road_start} <br \>ถึง  ${roads.get(linkid).road_end}  </span>
-					<span class="comment">ประมาณ ${roads.get(linkid).distance.tokenize(".").get(0) as Integer} เมตร	</span>
+					<span class="comment">ห่างจากจุดนี้ ประมาณ ${roads.get(linkid).distance.tokenize(".").get(0) as Integer} เมตร	</span>
 
 				</a>
 			</li>
 		  </g:each>
-		<li class=" autolisttext  "><a href="#" class="noeffect">Show 10 more items...</a></li>
+		<li class=" autolisttext  "><a href="#" class="noeffect">-- 10 รายการถัดไป --</a></li>
 	</ul>
 </div>
  

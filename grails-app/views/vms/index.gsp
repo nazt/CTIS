@@ -75,7 +75,7 @@
 				ป้ายจราจรอัจฉริยะ</div>
 		</div>
 		<div id="content">
-			กำลังระบุพิกัด
+			กำลังระบุตำแหน่ง
 				<form name="myform" action="/CTIS/vms/getVms/1" method='post'>
 					<g:hiddenField name="latitude" value="someValue" />
 					<g:hiddenField name="longitude" value="someValue" />

@@ -21,7 +21,7 @@
 		<div id="title">
 			ป้ายจราจรอัจฉริยะ</div>
 		<div id="leftnav">
-		<a href="javascript:history.back()"> <img src="/CTIS/Framework/images/home.png" alt="home"/></a>
+		<a href="/CTIS/vms">Back</a>
 		</div>
 	</div>
 <div id="content">
@@ -36,7 +36,7 @@
 				</a>
 			</li>
 		  </g:each>
-		<li class=" autolisttext  "><a href="#" class="noeffect">Show 10 more items...</a></li>
+		<li class=" autolisttext  "><!-- <a href="#" class="noeffect">-- 10 รายการถัดไป --</a> --></li>
 	</ul>
 </div>
  
