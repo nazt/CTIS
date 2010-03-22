@@ -1,4 +1,5 @@
-
+import grails.converters.*;
+import winterwell.jtwitter.*
 class ReportController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -29,13 +30,25 @@ class ReportController {
         }
     }
     def isave = {
+ 
         def reportInstance = new Report(params)
-        if (reportInstance.save(flush: true)) {
+        if (reportInstance.save(flush: true) && CongestionLevel.get(params['congestion_level']['id']).level >= 1) {
+	try {
+				Twitter twitter = new Twitter("devtraffy","improvemyself");
+				// Set my status
+/*				twitter.setStatus("${params.locationName} ${CongestionLevel.get(params['congestion_level']['id']).info} - ${CongestionCause.get(params['congestion_cause']['id']).reason} http://maps.google.com/maps?q=${params.longitude},${params.latitude}");	*/
+/*				twitter.setStatus("${CongestionLevel.get(params['congestion_level']['id']).info} - ${CongestionCause.get(params['congestion_cause']['id']).reason} http://maps.google.com/maps?q=${params.longitude},${params.latitude}")*/
+				twitter.setStatus("${params.locationName}  http://203.185.97.51:8080/CTIS/iwebkit/report/${reportInstance.id}")
+/*println  "${CongestionLevel.get(params['congestion_level']['id']).info} - ${CongestionCause.get(params['congestion_cause']['id']).reason} http://maps.google.com/maps?q=${params.longitude},${params.latitude}";					*/
+	} catch (Exception e) {
+		e.printStackTrace();
+				println 'twitter error'
+	}
             flash.message = "${message(code: 'default.created.message', args: [message(code: 'report.label', default: 'Report'), reportInstance.id])}"
             redirect(action: "index", controller:"iwebkit",id: reportInstance.id)
         }
         else {
-            render(view: "create", model: [reportInstance: reportInstance])
+          redirect(action: "say", controller:"iwebkit")
         }
     }
 
