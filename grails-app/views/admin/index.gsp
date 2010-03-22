@@ -32,7 +32,7 @@
 	</tr>
 	<tr>
 		<td>
-			<a href="/CTIS/report/"></a><img src="/CTIS/Framework/images/admin/manage_08.gif" width="391" height="93" alt=""></td>
+			<a href="/CTIS/report/"><img src="/CTIS/Framework/images/admin/manage_08.gif" width="391" height="93" alt="จัดการข้อมูล"></a></td>
 	</tr>
 	<tr>
 		<td>
