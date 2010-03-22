@@ -63,7 +63,10 @@
 					<img src="/CTIS/Framework/images/${reportInstance?.congestion_cause?.iconName}${reportInstance?.congestion_level?.colour}" alt="${reportInstance?.congestion_cause?.iconName}"/>
 					<span class="name">${fieldValue(bean:reportInstance,field:'message')}</span>
 					<span class="comment">${reportInstance?.locationName?.toString()}<br>
-					${reportInstance.dateCreated}</span>
+				 	
+				 เวลา ${reportInstance.dateCreated.toString().tokenize(' ').get(1).tokenize(':').get(0)}:${reportInstance.dateCreated.toString().tokenize(' ').get(1).tokenize(':').get(1)} น.   
+				
+				วันที่ ${reportInstance.dateCreated.toString().tokenize(' ').get(0).tokenize('-').get(2)}-${reportInstance.dateCreated.toString().tokenize(' ').get(0).tokenize('-').get(1)}-${reportInstance.dateCreated.toString().tokenize(' ').get(0).tokenize('-').get(0)}</span>
 					<span class="arrow"></span>
 				</a>
 			</li>
